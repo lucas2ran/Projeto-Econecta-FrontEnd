@@ -16,13 +16,21 @@
 }
 
 .imagem {
-  background-image: url("https://ik.imagekit.io/0emfpelsr/wallpaperflare.com_wallpaper__2_.jpg?updatedAt=1684768839760");
-  background-repeat: no-repeat;
+  background-image: url("https://ik.imagekit.io/0emfpelsr/59109.jpg?updatedAt=1684782566224");
+  background-repeat: repeat;
   width: 100vh;
   min-height: 100vh;
   background-size: cover;
   background-position: center;
 }
+
 .custom-txfield label {
-  color: black !important;
+  color: rgb(0, 0, 0) !important;
+}
+
+.card2 {
+  border-radius: 20px;
+  background: linear-gradient(3deg, #0503037a 10%, #1b191990 70%) !important;
+  padding: 2rem;
+  width: max(20vw, 300px);
 }

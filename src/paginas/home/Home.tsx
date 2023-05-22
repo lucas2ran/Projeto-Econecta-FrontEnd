@@ -20,7 +20,7 @@ function Home() {
           alignItems={"center"}
           gap={2}
         >
-          <Typography align="center" fontWeight={900} variant="h3">
+          <Typography align="center" fontWeight={800} variant="h3">
             Sejam todos muito bem vindos!
           </Typography>
           <Typography align="center" variant="body1">

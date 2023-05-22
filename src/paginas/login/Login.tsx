@@ -52,12 +52,12 @@ function Login() {
       className="imagem"
     >
       <Grid alignItems="center">
-        <Box className="card">
+        <Box className="card2">
           <form onSubmit={onSubmit}>
             <Typography
               variant="h3"
               gutterBottom
-              color="textPrimary"
+              color="initial"
               component="h3"
               align="center"
               className="textosL"
