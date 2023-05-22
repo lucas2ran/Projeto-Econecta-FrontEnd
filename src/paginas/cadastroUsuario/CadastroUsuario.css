@@ -1,5 +1,5 @@
 .imagem2 {
-  background-image: url("https://ik.imagekit.io/0emfpelsr/WasteRecycling21-min-scaled.jpg?updatedAt=1684363575904");
+  background-image: url(https://ik.imagekit.io/0emfpelsr/preview.jpg?updatedAt=1684783966692);
   background-repeat: no-repeat;
   width: 100vh;
   min-height: 100vh;
@@ -18,7 +18,7 @@
 
 .card1 {
   border-radius: 20px;
-  background: linear-gradient(93deg, #dfd9d990 8%, #ecf1ed90 89%);
+  background: linear-gradient(3deg, #1b15157a 10%, #b4afaf90 70%) !important;
   padding: 2rem;
   width: max(20vw, 300px);
 }
