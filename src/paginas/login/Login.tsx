@@ -73,6 +73,7 @@ function Login() {
               name="usuario"
               margin="normal"
               fullWidth
+              className="custom-txfield"
             />
             <TextField
               value={userLogin.senha}
@@ -84,6 +85,7 @@ function Login() {
               margin="normal"
               type="password"
               fullWidth
+              className="custom-txfield"
             />
             <Box marginTop={2} textAlign="center">
               <Button

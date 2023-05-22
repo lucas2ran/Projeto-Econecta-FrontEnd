@@ -58,7 +58,7 @@ function CadastroUsuario() {
       className="imagem2"
     >
       <Grid alignItems="center">
-        <Box className="card">
+        <Box className="card1">
           <form onSubmit={onSubmit}>
             <Typography
               variant="h3"
@@ -66,7 +66,7 @@ function CadastroUsuario() {
               color="textPrimary"
               component="h3"
               align="center"
-              className="textosL"
+              className="textosC"
             >
               Cadastrar
             </Typography>
@@ -79,6 +79,7 @@ function CadastroUsuario() {
               name="usuario"
               margin="normal"
               fullWidth
+              className="custom-txfield"
             />
             <TextField
               value={user.nome}
@@ -89,6 +90,7 @@ function CadastroUsuario() {
               name="nome"
               margin="normal"
               fullWidth
+              className="custom-txfield"
             />
             <TextField
               value={user.foto}
@@ -99,6 +101,7 @@ function CadastroUsuario() {
               name="foto"
               margin="normal"
               fullWidth
+              className="custom-txfield"
             />
             <TextField
               value={user.senha}
@@ -110,6 +113,7 @@ function CadastroUsuario() {
               margin="normal"
               type="password"
               fullWidth
+              className="custom-txfield"
             />
             <TextField
               value={confirmarSenha}
@@ -123,12 +127,13 @@ function CadastroUsuario() {
               margin="normal"
               type="password"
               fullWidth
+              className="custom-txfield"
             />
 
             <Box marginTop={2} textAlign="center">
               <Link to="/login" className="text-decorator-none">
                 <Button
-                  className="outlinedButtonL  btnCancelar"
+                  className="outlinedButtonC  btnCancelar"
                   variant="contained"
                   color="secondary"
                   style={{
@@ -141,7 +146,7 @@ function CadastroUsuario() {
                 </Button>
               </Link>
               <Button
-                className="outlinedButtonL"
+                className="outlinedButtonC"
                 variant="contained"
                 color="secondary"
                 type="submit"
@@ -166,7 +171,7 @@ function CadastroUsuario() {
                 variant="subtitle1"
                 gutterBottom
                 align="center"
-                className="textosL text-decorator-none"
+                className="textosC"
               >
                 {" "}
                 Clique aqui para logar

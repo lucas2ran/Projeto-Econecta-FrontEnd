@@ -1,16 +1,45 @@
 .imagem2 {
-    background-image: url("https://ik.imagekit.io/eou8tor4u/astronaut-1784245.jpg?updatedAt=1684515136662");
-    background-repeat: no-repeat;
-    width: 100vh;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .textoC {
-    font-weight: bold !important;
-  }
-  
-  .btnCancelar {
-    margin-right: 20px !important;
-  }
+  background-image: url("https://ik.imagekit.io/0emfpelsr/WasteRecycling21-min-scaled.jpg?updatedAt=1684363575904");
+  background-repeat: no-repeat;
+  width: 100vh;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.textoC {
+  font-weight: bold !important;
+  text-decoration: none !important;
+}
+
+.btnCancelar {
+  margin-right: 20px !important;
+}
+
+.card1 {
+  border-radius: 20px;
+  background: linear-gradient(93deg, #dfd9d990 8%, #ecf1ed90 89%);
+  padding: 2rem;
+  width: max(20vw, 300px);
+}
+
+.custom-txfield label {
+  color: black !important;
+}
+
+#usuario,
+#nome,
+#foto,
+#senha,
+#confirmarSenha {
+  color: black;
+}
+
+.outlinedButtonC {
+  border-color: #09221a !important;
+  color: #fcfcfc !important;
+}
+.outlinedButtonC:hover {
+  background-color: #5fda88 !important;
+  color: #fdfcfd !important;
+}
