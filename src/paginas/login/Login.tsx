@@ -6,37 +6,61 @@ import useLocalStorage from "react-use-localstorage";
 import { login } from "../../services/Service";
 import UserLogin from "../../models/UserLogin";
 import "./Login.css";
+import { useDispatch } from "react-redux";
+import { addId, addToken } from "../../store/tokens/actions";
 
 function Login() {
-  let history = useNavigate();
-  const [token, setToken] = useLocalStorage("token");
 
-  const [userLogin, setUserLogin] = useState<UserLogin>({
-    id: 0,
-    nome: "",
-    usuario: "",
-    foto: "",
-    senha: "",
-    token: "",
-  });
+  let navigate = useNavigate();
+    const dispatch = useDispatch();
+    const [token, setToken] = useState('');
+    const [userLogin, setUserLogin] = useState<UserLogin>(
+        {
+            id: 0,
+            nome: '',
+            usuario: '',
+            senha: '',
+            foto: '',
+            token: ''
+        }
+        );
+
+        const [respUserLogin, setRespUserLogin] = useState<UserLogin>(
+        {
+            id: 0,
+            nome: '',
+            usuario: '',
+            senha: '',
+            foto: '',
+            token: ''
+        }
+        );
 
   function updatedModel(e: ChangeEvent<HTMLInputElement>) {
     setUserLogin({
       ...userLogin,
       [e.target.name]: e.target.value,
-    });
+    })
   }
 
-  useEffect(() => {
-    if (token != "") {
-      history("/home");
+  // useEffect(() => {
+  //   if (token != "") {
+  //     navigate("/home");
+  //   }
+  // }, [token]);
+
+  useEffect(()=> {
+    if(respUserLogin.token !== '') {
+        dispatch(addToken(respUserLogin.token))
+        dispatch(addId(respUserLogin.id.toString()))
+        navigate('/home');
     }
-  }, [token]);
+}, [respUserLogin.token])
 
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
     try {
-      await login(`/usuarios/logar`, userLogin, setToken);
+      await login(`/usuarios/logar`, userLogin, setRespUserLogin);
 
       alert("Usuário logado com sucesso!!");
     } catch (error) {
