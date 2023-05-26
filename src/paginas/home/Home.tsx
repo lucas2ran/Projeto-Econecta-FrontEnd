@@ -1,52 +1,61 @@
-import * as React from "react";
-import { Button, Box, Grid, Paper, Typography } from "@mui/material";
-import "./Home.css";
-import TabPostagem from "../../components/postagens/tabPostagem/TabPostagem";
-
-
+import React, { useEffect } from 'react';
+import {Button} from '@material-ui/core';
+import {Grid, Typography} from '@mui/material'
+import {Box} from '@mui/material';
+import './Home.css';
+import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
+import { useNavigate , Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../store/tokens/tokensReducer';
+import TabPostagem from '../../components/postagens/tabPostagem/TabPostagem';
 function Home() {
-  
-  return (
-    <>
-      <Grid
-        container
-        gap={4}
-        alignItems={"center"}
-        justifyContent={"center"}
-        style={{ backgroundColor: "#3e5997" }}
-      >
-        <Grid item xs={4}>
-          <Box
-            p={8}
-            color={"white"}
-            display={"flex"}
-            flexDirection={"column"}
-            alignItems={"center"}
-            gap={2}
-          >
-            <Typography align="center" fontWeight={800} variant="h3">
-              Sejam todos muito bem vindos!
-            </Typography>
-            <Typography align="center" variant="body1">
-              Expresse suas idéias e se conecte com os demais...
-            </Typography>
-            <Button variant="outlined" className="outlinedButton">
-              Ver Postagens
-            </Button>
-          </Box>
-        </Grid>
-        <Grid item xs={4}>
-          <img
-            src="https://ik.imagekit.io/0emfpelsr/earth-desktop-wallpaper-environmentally-friendly-green-recycling-png-favpng-vBcNxvBpHVwRwR9pfDRcXifEw.jpg?updatedAt=1684363576357"
-            alt=""
-            width={"100%"}
-          />
-        </Grid>
-        <Grid xs={12} className="postagens">
-          <TabPostagem />
-        </Grid>
-      </Grid>
-    </>
-  );
+
+    let navigate = useNavigate();
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
+    
+    useEffect(() => {
+        if (token == "") {
+            alert("Você precisa estar logado")
+            navigate("/login")
+        }
+    }, [token])
+
+    return (
+<>
+            <Grid container direction="row" justifyContent="center" alignItems="center" className="caixa">
+
+                <Grid alignItems="center" item xs={6}>
+
+                    <Box paddingX={20} >
+                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className="titulo">Seja bem vindo(a)!</Typography>
+                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo">expresse aqui os seus pensamentos e opiniões!</Typography>
+                    </Box>
+
+                    <Box display="flex" justifyContent="center">
+                        <Box marginRight={1}>
+                            <ModalPostagem />
+                        </Box>
+                        
+                        <Link to='/postagem' className="text-decorator-none">
+                            <Button variant="outlined" className="botão">Ver Postagens</Button>
+                        </Link>
+
+                    </Box> 
+
+                </Grid>
+
+                <Grid item xs={6} >
+                    <img src="https://ik.imagekit.io/0emfpelsr/earth-desktop-wallpaper-environmentally-friendly-green-recycling-png-favpng-vBcNxvBpHVwRwR9pfDRcXifEw.jpg?updatedAt=1684363576357" alt="" width="500px" height="500px" />
+                </Grid>
+
+                <Grid xs={12} className="postagens">
+                    <TabPostagem/>
+                </Grid>
+
+            </Grid>
+        </>
+    );
 }
 export default Home;

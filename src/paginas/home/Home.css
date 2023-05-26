@@ -1,17 +1,22 @@
-.texto {
-    text-align: center;
+.caixa {
+  background-color: #3F51B5;
   }
   
-  .alinhamento {
-    display: flex;
+  .titulo {
+      color: white !important;
+      font-weight: bold !important;
   }
   
-  .outlinedButton {
-    border-color: #ffffff !important;
-    color: #fff !important;
+  .botão {
+      border-color: white !important;
+      background-color: #3F51B5;
+      color: white !important;
   }
   
-  .outlinedButton:hover {
-    background-color: #ffffff !important;
-    color: #000000 !important
+  .postagens {
+      background-color: white;
+  }
+  
+  .text-decorator-none {
+      text-decoration: none;
   }

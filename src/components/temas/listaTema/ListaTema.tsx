@@ -3,14 +3,20 @@ import { Link, useNavigate } from 'react-router-dom'
 import {Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import {Box} from '@mui/material';
 import './ListaTema.css';
-import useLocalStorage from 'react-use-localstorage';
 import Tema from '../../../models/Tema';
 import { busca } from '../../../services/Service';
+import { useDispatch, useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+import { addToken } from '../../../store/tokens/actions';
 
 function ListaTema() {
+
   const [temas, setTemas] = useState<Tema[]>([])
-  const [token, setToken] = useLocalStorage('token');
-  let navigate = useNavigate();
+        let navigate = useNavigate();
+        const dispatch = useDispatch();
+        const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+        );
 
   useEffect(()=>{
     if(token == ''){
@@ -19,14 +25,30 @@ function ListaTema() {
     }
   }, [token])
 
+    // async function getTema(){
+    //     await busca("/temas", setTemas, {
+    //         headers: {
+    //             'Authorization': token
+    //         }
+    //     })
+    // }
 
   async function getTema(){
-    await busca("/tema", setTemas, {
-      headers: {
+        
+    try {
+        await busca("/tema", setTemas, {
+        headers: {
         'Authorization': token
-      }
+        }
     })
-  }
+    } catch (error: any) {
+        if(error.toString().includes('403')) {
+            alert('O seu token expirou, logue novamente!')
+            dispatch(addToken(''));
+            navigate('/login')
+        }
+    }
+}
 
 
   useEffect(()=>{
@@ -34,7 +56,7 @@ function ListaTema() {
   }, [temas.length])
   return (
     <>
-     {
+    {
       temas.map(tema =>(
       <Box m={2} >
         <Card variant="outlined">
@@ -43,7 +65,7 @@ function ListaTema() {
               Tema
             </Typography>
             <Typography variant="h5" component="h2">
-              Minha descrição
+              {tema.descricao}
             </Typography>
           </CardContent>
           <CardActions>
