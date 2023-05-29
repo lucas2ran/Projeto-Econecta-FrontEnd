@@ -8,6 +8,7 @@ import { busca } from '../../../services/Service';
 import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { addToken } from '../../../store/tokens/actions';
+import { toast } from 'react-toastify';
 
 function ListaTema() {
 
@@ -20,7 +21,16 @@ function ListaTema() {
 
   useEffect(()=>{
     if(token == ''){
-      alert("Você precisa estar logado")
+      toast.error("Você precisa estar logado",{
+        position:"top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+    })
       navigate("/login")
     }
   }, [token])
@@ -43,7 +53,18 @@ function ListaTema() {
     })
     } catch (error: any) {
         if(error.toString().includes('403')) {
-            alert('O seu token expirou, logue novamente!')
+            toast.info('O seu token expirou, logue novamente!',{
+              position:"top-right",
+              autoClose: 2000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: false,
+              theme: "colored",
+              progress: undefined,
+          })
+
+
             dispatch(addToken(''));
             navigate('/login')
         }
