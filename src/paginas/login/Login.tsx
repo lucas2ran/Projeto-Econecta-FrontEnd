@@ -98,12 +98,11 @@ function Login() {
       className="imagem"
     >
       <Grid alignItems="center">
-        <Box className="card2">
+        <Box className="login-card card-header card-body">
           <form onSubmit={onSubmit}>
             <Typography
               variant="h3"
               gutterBottom
-              style = {{color: "#0111257a"}}
               component="h3"
               align="center"
               className="textosL"
@@ -118,6 +117,7 @@ function Login() {
               variant="outlined"
               name="usuario"
               margin="normal"
+              type="text"
               fullWidth
               className="custom-txfield"
             />
@@ -141,7 +141,7 @@ function Login() {
                 color="primary"
                 style={{
                   borderColor: "white",
-                  backgroundColor: "black",
+                  backgroundColor: "#09221a",
                   color: "white",
                 }}
               >
@@ -151,7 +151,7 @@ function Login() {
           </form>
           <Box display="flex" justifyContent="center" marginTop={2}>
             <Box marginRight={1}>
-              <Typography variant="subtitle1" gutterBottom align="center">
+              <Typography variant="subtitle1" gutterBottom align="center" className="" >
                 Não tem uma conta?
               </Typography>
             </Box>
@@ -160,7 +160,7 @@ function Login() {
                 variant="subtitle1"
                 gutterBottom
                 align="center"
-                className="textosL text-decorator-none"
+                className="textosC text-decorator-none"
               >
                 {" "}
                 Cadastre-se
