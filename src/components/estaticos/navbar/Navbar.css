@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap");
+
 .cursor {
   cursor: pointer;
-  color: white;
+  color: #065408;
 }
 
 .text-decorator-none {
@@ -8,6 +10,9 @@
 }
 
 .cursor:hover {
-  color: rgb(102, 196, 81);
+  color: #3fb844;
 }
 
+.font {
+  font-family: Georgia, 'Signika Negative', sans-serif !important;
+}

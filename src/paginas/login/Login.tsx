@@ -2,7 +2,6 @@ import React, { useState, ChangeEvent, useEffect } from "react";
 import { Grid, TextField, Typography, Button } from "@material-ui/core";
 import { Box } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
-import useLocalStorage from "react-use-localstorage";
 import { login } from "../../services/Service";
 import UserLogin from "../../models/UserLogin";
 import "./Login.css";
@@ -104,7 +103,7 @@ function Login() {
             <Typography
               variant="h3"
               gutterBottom
-              color="initial"
+              style = {{color: "#0111257a"}}
               component="h3"
               align="center"
               className="textosL"

@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
 import TabPostagem from '../../components/postagens/tabPostagem/TabPostagem';
 import { toast } from 'react-toastify';
+import '../../components/carousel/Carousel/';
 function Home() {
 
     let navigate = useNavigate();

@@ -36,12 +36,12 @@ function Navbar() {
 
     if(token != "") {
       navbarComponent =
-        <AppBar position="static" style={{ backgroundColor: "black" }}>
+        <AppBar position="static" style={{ backgroundColor: "#f5ebdd" }}>
         <Toolbar variant="dense">
           <Grid container justifyContent={"space-between"}>
             <Box>
-              <Typography variant="h5" color="inherit">
-                Econecta
+              <Typography variant="h5" color="#32301d">
+                <img style={{height: "33px"}} src="https://ik.imagekit.io/0emfpelsr/Econecta__4__-_Copia-removebg-preview.png?updatedAt=1685458339025%22"></img>
               </Typography>
             </Box>
 
@@ -60,7 +60,7 @@ function Navbar() {
                 </Typography>
               </Box>
               </Link>
-              <Link to="/tema" >
+              <Link to="/tema" className="text-decorator-none">
               <Box mx={1} className="cursor">
                 <Typography variant="h6" color="inherit">
                   Temas

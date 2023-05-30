@@ -1,3 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap");
+
 .text-decorator-none{
     text-decoration: none;
 }
+
+.tab-bg {
+    background-color: #f5ebdd !important;
+} 
+
+.font-text {
+    color: #065408 !important;
+}
+
+.font {
+    font-family: Georgia, 'Signika Negative', sans-serif !important;
+  }
