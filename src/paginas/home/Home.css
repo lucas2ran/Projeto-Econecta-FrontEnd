@@ -14,7 +14,8 @@
   .botão {
       border-color: white !important;
       background-color: white !important;
-      color: black !important;
+      color: #f34d26 !important;
+      font-weight: bold !important;
   }
 
   .botão:hover {

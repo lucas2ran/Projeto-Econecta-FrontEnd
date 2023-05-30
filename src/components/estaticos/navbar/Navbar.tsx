@@ -45,44 +45,44 @@ function Navbar() {
               </Typography>
             </Box>
 
-            <Box display="flex" justifyContent="start">
+            <Box display="flex" justifyContent="start" >
               <Link to="/home" className="text-decorator-none">
                 <Box mx={1} className="cursor">
-                  <Typography variant="h6" color="inherit">
+                  <Typography variant="h6" color="inherit" className="cursor" >
                     Home
                   </Typography>
                 </Box>
               </Link>
               <Link to="/postagem" className="text-decorator-none">
               <Box mx={1} className="cursor">
-                <Typography variant="h6" color="inherit">
+                <Typography variant="h6" color="inherit" className="cursor">
                   Postagens
                 </Typography>
               </Box>
               </Link>
               <Link to="/tema" className="text-decorator-none">
               <Box mx={1} className="cursor">
-                <Typography variant="h6" color="inherit">
+                <Typography variant="h6" color="inherit" className="cursor">
                   Temas
                 </Typography>
               </Box>
               </Link>
               <Link to="/formularioTema" className="text-decorator-none">
               <Box mx={1} className="cursor">
-                <Typography variant="h6" color="inherit">
+                <Typography variant="h6" color="inherit" className="cursor">
                   Cadastrar tema
                 </Typography>
               </Box>
               </Link>
               <Link to="/sobre" className="text-decorator-none">
                 <Box mx={1} className="cursor">
-                  <Typography variant="h6" color="inherit">
+                  <Typography variant="h6" color="inherit" className="cursor">
                     Sobre nós
                   </Typography>
                 </Box>
               </Link>
                 <Box mx={1} className="cursor" onClick={goLogout}>
-                  <Typography variant="h6" color="inherit">
+                  <Typography variant="h6" color="inherit" className="cursor">
                     Logout
                   </Typography>
                 </Box>         
