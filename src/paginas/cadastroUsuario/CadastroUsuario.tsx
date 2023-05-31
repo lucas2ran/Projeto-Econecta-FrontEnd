@@ -44,8 +44,8 @@ function CadastroUsuario() {
     e.preventDefault();
     if (confirmarSenha == user.senha) {
       cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult);
-      toast.success("Usuario cadastrado com sucesso",{
-        position:"top-right",
+      toast.success("Usuario cadastrado com sucesso", {
+        position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -53,21 +53,21 @@ function CadastroUsuario() {
         draggable: false,
         theme: "colored",
         progress: undefined,
-    })
-
-
-
+      });
     } else {
-      toast.error("Dados inconsistentes. Favor verificar as informações de cadastro.",{
-        position:"top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: false,
-        theme: "colored",
-        progress: undefined,
-    })
+      toast.error(
+        "Dados inconsistentes. Favor verificar as informações de cadastro.",
+        {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          theme: "colored",
+          progress: undefined,
+        }
+      );
     }
   }
   return (
@@ -78,7 +78,7 @@ function CadastroUsuario() {
       className="imagem2"
     >
       <Grid alignItems="center">
-        <Box className="card1">
+        <Box className="login-card1 card-header1 card-body1">
           <form onSubmit={onSubmit}>
             <Typography
               variant="h3"
@@ -98,6 +98,7 @@ function CadastroUsuario() {
               variant="outlined"
               name="usuario"
               margin="normal"
+              type="text"
               fullWidth
               className="custom-txfield"
             />
@@ -109,6 +110,7 @@ function CadastroUsuario() {
               variant="outlined"
               name="nome"
               margin="normal"
+              type="text"
               fullWidth
               className="custom-txfield"
             />
@@ -120,6 +122,7 @@ function CadastroUsuario() {
               variant="outlined"
               name="foto"
               margin="normal"
+              type="text"
               fullWidth
               className="custom-txfield"
             />
@@ -186,12 +189,12 @@ function CadastroUsuario() {
                 Já tem uma conta?
               </Typography>
             </Box>
-            <Link to="/login">
+            <Link to="/login" className="text-decoration">
               <Typography
                 variant="subtitle1"
                 gutterBottom
                 align="center"
-                className="textosC"
+                className="textoLink"
               >
                 {" "}
                 Clique aqui para logar

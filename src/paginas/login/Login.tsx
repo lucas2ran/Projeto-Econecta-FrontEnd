@@ -2,7 +2,6 @@ import React, { useState, ChangeEvent, useEffect } from "react";
 import { Grid, TextField, Typography, Button } from "@material-ui/core";
 import { Box } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
-import useLocalStorage from "react-use-localstorage";
 import { login } from "../../services/Service";
 import UserLogin from "../../models/UserLogin";
 import "./Login.css";
@@ -11,37 +10,32 @@ import { addId, addToken } from "../../store/tokens/actions";
 import { toast } from "react-toastify";
 
 function Login() {
-
   let navigate = useNavigate();
-    const dispatch = useDispatch();
-    const [token, setToken] = useState('');
-    const [userLogin, setUserLogin] = useState<UserLogin>(
-        {
-            id: 0,
-            nome: '',
-            usuario: '',
-            senha: '',
-            foto: '',
-            token: ''
-        }
-        );
+  const dispatch = useDispatch();
+  const [token, setToken] = useState("");
+  const [userLogin, setUserLogin] = useState<UserLogin>({
+    id: 0,
+    nome: "",
+    usuario: "",
+    senha: "",
+    foto: "",
+    token: "",
+  });
 
-        const [respUserLogin, setRespUserLogin] = useState<UserLogin>(
-        {
-            id: 0,
-            nome: '',
-            usuario: '',
-            senha: '',
-            foto: '',
-            token: ''
-        }
-        );
+  const [respUserLogin, setRespUserLogin] = useState<UserLogin>({
+    id: 0,
+    nome: "",
+    usuario: "",
+    senha: "",
+    foto: "",
+    token: "",
+  });
 
   function updatedModel(e: ChangeEvent<HTMLInputElement>) {
     setUserLogin({
       ...userLogin,
       [e.target.name]: e.target.value,
-    })
+    });
   }
 
   // useEffect(() => {
@@ -50,21 +44,21 @@ function Login() {
   //   }
   // }, [token]);
 
-  useEffect(()=> {
-    if(respUserLogin.token !== '') {
-        dispatch(addToken(respUserLogin.token))
-        dispatch(addId(respUserLogin.id.toString()))
-        navigate('/home');
+  useEffect(() => {
+    if (respUserLogin.token !== "") {
+      dispatch(addToken(respUserLogin.token));
+      dispatch(addId(respUserLogin.id.toString()));
+      navigate("/home");
     }
-}, [respUserLogin.token])
+  }, [respUserLogin.token]);
 
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
     try {
       await login(`/usuarios/logar`, userLogin, setRespUserLogin);
 
-      toast.success("Usuário logado com sucesso!!",{
-        position:"top-right",
+      toast.success("Usuário logado com sucesso!!", {
+        position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -72,12 +66,10 @@ function Login() {
         draggable: false,
         theme: "colored",
         progress: undefined,
-    })
-
-      
+      });
     } catch (error) {
-      toast.error("Dados do usuário inconsistentes. Erro ao logar!!",{
-        position:"top-right",
+      toast.error("Dados do usuário inconsistentes. Erro ao logar!!", {
+        position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -85,9 +77,7 @@ function Login() {
         draggable: false,
         theme: "colored",
         progress: undefined,
-    })
-
-
+      });
     }
   }
 
@@ -99,7 +89,7 @@ function Login() {
       className="imagem"
     >
       <Grid alignItems="center">
-        <Box className="card2">
+        <Box className="login-card card-header card-body ">
           <form onSubmit={onSubmit}>
             <Typography
               variant="h3"
@@ -116,9 +106,10 @@ function Login() {
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="usuario"
               label="usuario"
-              variant="outlined"
               name="usuario"
               margin="normal"
+              variant="outlined"
+              type="text"
               fullWidth
               className="custom-txfield"
             />
@@ -132,7 +123,7 @@ function Login() {
               margin="normal"
               type="password"
               fullWidth
-              className="custom-txfield"
+              className="custom-txfield "
             />
             <Box marginTop={2} textAlign="center">
               <Button
@@ -142,7 +133,7 @@ function Login() {
                 color="primary"
                 style={{
                   borderColor: "white",
-                  backgroundColor: "black",
+                  backgroundColor: "#09221a",
                   color: "white",
                 }}
               >
