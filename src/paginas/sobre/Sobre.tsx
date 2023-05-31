@@ -1,40 +1,8 @@
-// import React from 'react';
-// import './Sobre.css';
-// import { Box, Button, Grid, TextField, Typography } from '@mui/material';
-
-// function Sobre() {
-//   return (
-//     <Grid
-//       container
-//       alignItems={'center'}
-//       justifyContent={'center'}
-//       className="container"
-//     >
-//       <Box className="card">
-//         <form className="form">
-//           <Typography variant="h3" align="center" textTransform={'uppercase'} className="form-title" color='#fff'>
-//             Sobre
-//           </Typography>
-//           <Box className="form-input">
-
-//           </Box>
-//           <Box className="form-input">
-
-//           </Box>
-
-//         </form>
-//       </Box>
-//     </Grid>
-//   );
-// }
-
-// export default Sobre;
-
 import React, { useEffect } from "react";
-import { Button } from "@material-ui/core";
+
 import { Divider, Grid, Typography } from "@mui/material";
-import { Box } from "@mui/material";
-import { useNavigate, Link } from "react-router-dom";
+
+import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../store/tokens/tokensReducer";
 import { toast } from "react-toastify";
@@ -97,6 +65,7 @@ function Sobre() {
               online e fazer a diferença no mundo. Junte-se à Econecta agora!
             </Typography>
           </Grid>
+
           <Divider orientation="vertical" flexItem></Divider>
           <Grid item xs>
             <Typography
@@ -115,13 +84,8 @@ function Sobre() {
               cada vez.
             </Typography>
           </Grid>
-          <Grid xs={6} style={{ padding: "30px", alignItems: "center" }}>
-            <Box>
-              <img
-                src="https://ik.imagekit.io/0emfpelsr/four-save-planet-set-icons_603843-3157.avif?updatedAt=1684785329029"
-                alt=""
-              />
-            </Box>
+          <Grid xs={6} alignContent={"center"} textAlign={"center"}>
+            <img src="https://ik.imagekit.io/0emfpelsr/four-save-planet-set-icons_603843-3157.avif?updatedAt=1684785329029" />
           </Grid>
         </Grid>
       </Grid>

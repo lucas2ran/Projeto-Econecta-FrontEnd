@@ -19,17 +19,6 @@
   gap: 1rem;
 }
 
-/* Input não preenchido ERRO
-.MuiFormLabel-root, .MuiInputBase-root{
-  color: #fff!important;
-  
-}
-.MuiInputBase-root:before {
-  border-color: #fff !important;
-} */
-/*Input preenchido e com/sem foco*/
-/* Não precisa */
-
 .MuiFormLabel-filled {
   color: #0b496d !important;
   font-weight: bold !important;
@@ -49,9 +38,6 @@
   background-position: center;
 }
 
-.image {
+/* .image {
   align-items: center !important;
-  padding: 50px !important;
-  height: 100vh !important;
-  width: 100vw !important;
-}
+} */
