@@ -73,16 +73,26 @@ function ListaPostagem() {
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>
 
-                  <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none" >
+                  <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none">
                     <Box mx={1}>
-                      <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                      <Button variant="contained" className="marginLeft outlinedButtonC" size='small'
+                      style={{
+                        borderColor: "white",
+                        backgroundColor: "#09221a",
+                        color: "white",
+                      }}>
                         atualizar
                       </Button>
                     </Box>
                   </Link>
                   <Link to={`/deletarPostagem/${post.id}`} className="text-decorator-none">
                     <Box mx={1}>
-                      <Button variant="contained" size='small' color="secondary">
+                      <Button variant="contained" size='small' className='outlinedButtonC'
+                      style={{
+                        borderColor: "white",
+                        backgroundColor: "#09221a",
+                        color: "white",
+                      }}>
                         deletar
                       </Button>
                     </Box>

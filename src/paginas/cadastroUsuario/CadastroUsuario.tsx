@@ -86,7 +86,7 @@ function CadastroUsuario() {
               color="textPrimary"
               component="h3"
               align="center"
-              className="textosC"
+              className="textosL"
             >
               Cadastrar
             </Typography>
