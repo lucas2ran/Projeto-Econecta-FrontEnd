@@ -94,7 +94,6 @@ function Login() {
             <Typography
               variant="h3"
               gutterBottom
-              color="initial"
               component="h3"
               align="center"
               className="textosL"
@@ -143,7 +142,12 @@ function Login() {
           </form>
           <Box display="flex" justifyContent="center" marginTop={2}>
             <Box marginRight={1}>
-              <Typography variant="subtitle1" gutterBottom align="center">
+              <Typography
+                variant="subtitle1"
+                gutterBottom
+                align="center"
+                className=""
+              >
                 Não tem uma conta?
               </Typography>
             </Box>
@@ -152,7 +156,7 @@ function Login() {
                 variant="subtitle1"
                 gutterBottom
                 align="center"
-                className="textosL text-decorator-none"
+                className="textosC text-decorator-none"
               >
                 {" "}
                 Cadastre-se

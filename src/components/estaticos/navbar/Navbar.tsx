@@ -36,53 +36,53 @@ function Navbar() {
 
     if(token != "") {
       navbarComponent =
-        <AppBar position="static" style={{ backgroundColor: "black" }}>
+        <AppBar position="static" style={{ backgroundColor: "#f5ebdd" }}>
         <Toolbar variant="dense">
           <Grid container justifyContent={"space-between"}>
             <Box>
-              <Typography variant="h5" color="inherit">
-                Econecta
+              <Typography variant="h5" color="#32301d">
+                <img style={{height: "33px"}} src="https://ik.imagekit.io/0emfpelsr/Econecta__4__-_Copia-removebg-preview.png?updatedAt=1685458339025%22"></img>
               </Typography>
             </Box>
 
-            <Box display="flex" justifyContent="start">
+            <Box display="flex" justifyContent="start" >
               <Link to="/home" className="text-decorator-none">
                 <Box mx={1} className="cursor">
-                  <Typography variant="h6" color="inherit">
+                  <Typography variant="h6" color="inherit" className="cursor" >
                     Home
                   </Typography>
                 </Box>
               </Link>
               <Link to="/postagem" className="text-decorator-none">
               <Box mx={1} className="cursor">
-                <Typography variant="h6" color="inherit">
+                <Typography variant="h6" color="inherit" className="cursor">
                   Postagens
                 </Typography>
               </Box>
               </Link>
-              <Link to="/tema" >
+              <Link to="/tema" className="text-decorator-none">
               <Box mx={1} className="cursor">
-                <Typography variant="h6" color="inherit">
+                <Typography variant="h6" color="inherit" className="cursor">
                   Temas
                 </Typography>
               </Box>
               </Link>
               <Link to="/formularioTema" className="text-decorator-none">
               <Box mx={1} className="cursor">
-                <Typography variant="h6" color="inherit">
+                <Typography variant="h6" color="inherit" className="cursor">
                   Cadastrar tema
                 </Typography>
               </Box>
               </Link>
               <Link to="/sobre" className="text-decorator-none">
                 <Box mx={1} className="cursor">
-                  <Typography variant="h6" color="inherit">
+                  <Typography variant="h6" color="inherit" className="cursor">
                     Sobre nós
                   </Typography>
                 </Box>
               </Link>
                 <Box mx={1} className="cursor" onClick={goLogout}>
-                  <Typography variant="h6" color="inherit">
+                  <Typography variant="h6" color="inherit" className="cursor">
                     Logout
                   </Typography>
                 </Box>         
