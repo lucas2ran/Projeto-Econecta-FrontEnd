@@ -1,4 +1,4 @@
-.card{
+.card {
   border-radius: 20px;
   background: linear-gradient(93deg, #ffffff90 8%, #ffffff90 89%);
   padding: 2rem;
@@ -13,36 +13,31 @@
   background: linear-gradient(275deg, #1a71a4 8%, #ce455e 89%);
 }
 
-.form{
+.form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-/* Input não preenchido ERRO
-.MuiFormLabel-root, .MuiInputBase-root{
-  color: #fff!important;
-  
-}
-.MuiInputBase-root:before {
-  border-color: #fff !important;
-} */
-/*Input preenchido e com/sem foco*/
-/* Não precisa */
-
-.MuiFormLabel-filled{
-  color: #0b496d!important;
-  font-weight: bold!important;
+.MuiFormLabel-filled {
+  color: #0b496d !important;
+  font-weight: bold !important;
 }
 
-.container{
+.container {
   background-image: url("https://img.freepik.com/fotos-gratis/conceito-de-reciclagem-lay-flat_23-2148834519.jpg?t=st=1684346518~exp=1684347118~hmac=55ebb94c82efd152ffa48317c0831eae4806ef1811795c033ade9f5181f0c0fd");
   background-repeat: no-repeat;
   width: 100vw;
 
   /* calc é uma função que irá calcular e retornar um valor */
-  min-height: calc(100vh - 48px); /* 100vh - 48px que é a altura do NavBar/Menu */
-  
+  min-height: calc(
+    100vh - 48px
+  ); /* 100vh - 48px que é a altura do NavBar/Menu */
+
   background-size: cover;
   background-position: center;
 }
+
+/* .image {
+  align-items: center !important;
+} */
