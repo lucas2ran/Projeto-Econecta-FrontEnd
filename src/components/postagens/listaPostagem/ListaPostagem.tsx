@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
-import { Box } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import './ListaPostagem.css';
 import Postagem from '../../../models/Postagem';
 import { busca, post } from '../../../services/Service';
@@ -8,6 +8,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
+
 
 function ListaPostagem() {
   const [posts, setPosts] = useState<Postagem[]>([])
@@ -48,9 +49,18 @@ function ListaPostagem() {
 
   return (
     <>
-      {
+
+    <body className="bgpost">
+
+    <Box className='bgtitulopost'>
+        <Typography variant="h3" color="textSecondary" component="h1" align="center" className="titulopost">Arquivo de posts</Typography>
+    </Box>
+
+    <Box display="flex" flexDirection="row" >
+    {
         posts.map(post => (
-          <Box m={2} >
+
+          <Box m={2}>
             <Card variant="outlined">
               <CardContent>
                 <Typography color="textSecondary" gutterBottom>
@@ -80,6 +90,7 @@ function ListaPostagem() {
                         borderColor: "white",
                         backgroundColor: "#09221a",
                         color: "white",
+                        fontWeight: "bold"
                       }}>
                         atualizar
                       </Button>
@@ -92,6 +103,7 @@ function ListaPostagem() {
                         borderColor: "white",
                         backgroundColor: "#09221a",
                         color: "white",
+                        fontWeight: "bold"
                       }}>
                         deletar
                       </Button>
@@ -103,6 +115,10 @@ function ListaPostagem() {
           </Box>
         ))
       }
+    </Box>
+        
+    </body>
+    
     </>)
 }
 

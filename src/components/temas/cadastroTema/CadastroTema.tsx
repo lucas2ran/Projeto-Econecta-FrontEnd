@@ -3,9 +3,11 @@ import { Container, Typography, TextField, Button } from "@material-ui/core"
 import Tema from '../../../models/Tema';
 import { buscaId, post, put } from '../../../services/Service';
 import { useNavigate, useParams} from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
+import './CadastroTema.css';
+import { red } from '@mui/material/colors';
 
 function CadastroTema() {
 
@@ -102,16 +104,35 @@ function CadastroTema() {
         navigate('/tema')
     }
 
+
     return (
-        <Container maxWidth="sm" className="topo">
+
+        <body className='bgcadtema'>
+            <Container maxWidth="sm" className="topo">
+        
         <form onSubmit={onSubmit}>
-            <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
-            <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
-            <Button type="submit" variant="contained" color="primary">
+            <Typography variant="h3" color="textSecondary" component="h1" align="center" className="titulotema">Cadastre seu tema!</Typography>
+            
+            <div className='cadtemabox1'>
+                <Typography variant="h3" color="textSecondary" component="h1" align="center" className="textotema" >Sobre o que você gostaria de falar?</Typography>
+            </div>
+            
+            <div className="cadtemabox2">
+            <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="Descrição" variant="outlined" name="descricao" margin="normal" fullWidth />
+            <Button type="submit" variant="contained" color="primary" className="outlinedButtonD" style={{
+                        borderColor: "white",
+                        backgroundColor: "orangered",
+                        color: "white"
+                    }}>
                 Finalizar
-            </Button>
+            </Button></div>
+            
         </form>
+
     </Container>
+        </body>
+
+        
     )
 }
 
