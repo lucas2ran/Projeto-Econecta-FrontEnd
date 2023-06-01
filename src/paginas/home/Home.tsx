@@ -34,29 +34,26 @@ function Home() {
   }, [token]);
 
   const responsive = {
+    0: { items: 1 },
     568: { items: 2 },
     1024: { items: 3 },
   };
 
   const items = [
     <img
-      src="https://ik.imagekit.io/0emfpelsr/Seja_bem_vindo_ao_Econecta.png?updatedAt=1685585246348"
-      style={{ width: "80%", height: "400px" }}
+      src="https://cdn.discordapp.com/attachments/1094734846821138462/1113110623115554897/screenshot-17-6.png"
+      role="presentation"
+      style={{ marginTop: "1%", width: "80%", height: "300px" }}
     />,
     <img
-      src="https://ik.imagekit.io/0emfpelsr/Seja_bem_vindo_ao_Econecta__1_.png?updatedAt=1685585248253"
+      src="https://cdn.discordapp.com/attachments/1094734846821138462/1113110996052103281/set-items-secondary-use-upcycling_530689-775.png"
       role="presentation"
-      style={{ width: "80%", height: "400px" }}
+      style={{ marginTop: "1%", width: "80%", height: "300px" }}
     />,
     <img
-      src="https://ik.imagekit.io/0emfpelsr/Seja_bem_vindo_ao_Econecta__2_.png?updatedAt=1685585247177"
+      src="https://cdn.discordapp.com/attachments/1094734846821138462/1113111083960520724/upcycle-plastic-bottles-5526525-4622611.png"
       role="presentation"
-      style={{ width: "80%", height: "400px" }}
-    />,
-    <img
-      src="https://ik.imagekit.io/0emfpelsr/Seja_bem_vindo_ao_Econecta__3_.png?updatedAt=1685585248241"
-      role="presentation"
-      style={{ width: "80%", height: "400px" }}
+      style={{ marginTop: "1%", width: "80%", height: "300px" }}
     />,
   ];
 

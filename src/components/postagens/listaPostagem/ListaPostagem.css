@@ -1,3 +1,36 @@
 .text-decorator-none{
     text-decoration: none;
 }
+
+.titulopost {
+
+        color: white !important;
+        font-weight: bold !important;
+        font-family: "Passion One", sans-serif !important;
+        font-weight: 700 !important;
+        display: flex;
+        justify-content: center;
+
+}
+
+.bgtitulopost {
+    width: 350px;
+    height: 60px; 
+    margin: auto;
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+.bgpost {
+    /* background-image: url('https://ik.imagekit.io/0emfpelsr/preview.jpg?updatedAt=1684783966692'); */
+    background-color: orangered !important;
+    background-size: cover !important;
+    background-position: unset;
+    min-height: 100vh;
+}
+
+.wrap {
+    display: flex;
+    flex: wrap;
+    flex-direction: row !important;
+}
