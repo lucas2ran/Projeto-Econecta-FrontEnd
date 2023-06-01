@@ -77,41 +77,66 @@ function ListaTema() {
   }, [temas.length])
   return (
     <>
-    {
-      temas.map(tema =>(
-      <Box m={2} >
-        <Card variant="outlined">
-          <CardContent>
-            <Typography color="textSecondary" gutterBottom>
-              Tema
-            </Typography>
-            <Typography variant="h5" component="h2">
-              {tema.descricao}
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Box display="flex" justifyContent="center" mb={1.5} >
+    <body className="bgposttemas">
+    <Typography variant="h3" color="textSecondary" component="h1" align="center" className="titulotema" style={{padding: "35px"}}>Temas que você encontra por aqui...</Typography>
 
-              <Link to={`/formularioTema/${tema.id}`} className="text-decorator-none">
-                <Box mx={1}>
-                  <Button variant="contained" className="marginLeft" size='small' color="primary" >
-                    atualizar
-                  </Button>
-                </Box>
-              </Link>
-              <Link to={`/deletarTema/${tema.id}`} className="text-decorator-none">
-                <Box mx={1}>
-                  <Button variant="contained" size='small' color="secondary">
-                    deletar
-                  </Button>
-                </Box>
-              </Link>
+<Box display="flex" flexDirection="row" >
+
+{temas.map(tema =>(
+  <Box m={2}>
+    
+    <Card variant="outlined">
+      <CardContent>
+        <Typography color="textSecondary" gutterBottom>
+          Tema
+        </Typography>
+        <Typography variant="h5" component="h2">
+          {tema.descricao}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Box display="flex" justifyContent="center" mb={1.5} >
+
+          <Link to={`/formularioTema/${tema.id}`} className="text-decorator-none">
+            <Box mx={1}>
+              <Button variant="contained" className="marginLeft outlinedButtonD" size='small' 
+                  style={{
+                    borderColor: "white",
+                    backgroundColor: "orangered",
+                    color: "white",
+                    fontWeight: "bold"
+                  }}>
+                atualizar
+              </Button>
             </Box>
-          </CardActions>
-        </Card>
-      </Box>
-      ))
-      }
+          </Link>
+          <Link to={`/deletarTema/${tema.id}`} className="text-decorator-none">
+            <Box mx={1}>
+              <Button variant="contained" size='small' className="outlinedButtonD"
+                  style={{
+                    borderColor: "white",
+                    backgroundColor: "orangered",
+                    color: "white",
+                    fontWeight: "bold"
+                  }}>
+                deletar
+              </Button>
+            </Box>
+          </Link>
+        </Box>
+      </CardActions>
+    </Card>
+
+    
+  </Box>
+  ))
+}
+
+</Box>
+
+    </body>
+    
+      
     </>
   
   );

@@ -10,37 +10,32 @@ import { addId, addToken } from "../../store/tokens/actions";
 import { toast } from "react-toastify";
 
 function Login() {
-
   let navigate = useNavigate();
-    const dispatch = useDispatch();
-    const [token, setToken] = useState('');
-    const [userLogin, setUserLogin] = useState<UserLogin>(
-        {
-            id: 0,
-            nome: '',
-            usuario: '',
-            senha: '',
-            foto: '',
-            token: ''
-        }
-        );
+  const dispatch = useDispatch();
+  const [token, setToken] = useState("");
+  const [userLogin, setUserLogin] = useState<UserLogin>({
+    id: 0,
+    nome: "",
+    usuario: "",
+    senha: "",
+    foto: "",
+    token: "",
+  });
 
-        const [respUserLogin, setRespUserLogin] = useState<UserLogin>(
-        {
-            id: 0,
-            nome: '',
-            usuario: '',
-            senha: '',
-            foto: '',
-            token: ''
-        }
-        );
+  const [respUserLogin, setRespUserLogin] = useState<UserLogin>({
+    id: 0,
+    nome: "",
+    usuario: "",
+    senha: "",
+    foto: "",
+    token: "",
+  });
 
   function updatedModel(e: ChangeEvent<HTMLInputElement>) {
     setUserLogin({
       ...userLogin,
       [e.target.name]: e.target.value,
-    })
+    });
   }
 
   // useEffect(() => {
@@ -49,21 +44,21 @@ function Login() {
   //   }
   // }, [token]);
 
-  useEffect(()=> {
-    if(respUserLogin.token !== '') {
-        dispatch(addToken(respUserLogin.token))
-        dispatch(addId(respUserLogin.id.toString()))
-        navigate('/home');
+  useEffect(() => {
+    if (respUserLogin.token !== "") {
+      dispatch(addToken(respUserLogin.token));
+      dispatch(addId(respUserLogin.id.toString()));
+      navigate("/home");
     }
-}, [respUserLogin.token])
+  }, [respUserLogin.token]);
 
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
     try {
       await login(`/usuarios/logar`, userLogin, setRespUserLogin);
 
-      toast.success("Usuário logado com sucesso!!",{
-        position:"top-right",
+      toast.success("Usuário logado com sucesso!!", {
+        position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -71,12 +66,10 @@ function Login() {
         draggable: false,
         theme: "colored",
         progress: undefined,
-    })
-
-      
+      });
     } catch (error) {
-      toast.error("Dados do usuário inconsistentes. Erro ao logar!!",{
-        position:"top-right",
+      toast.error("Dados do usuário inconsistentes. Erro ao logar!!", {
+        position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -84,9 +77,7 @@ function Login() {
         draggable: false,
         theme: "colored",
         progress: undefined,
-    })
-
-
+      });
     }
   }
 
@@ -98,7 +89,7 @@ function Login() {
       className="imagem"
     >
       <Grid alignItems="center">
-        <Box className="login-card card-header card-body">
+        <Box className="login-card card-header card-body ">
           <form onSubmit={onSubmit}>
             <Typography
               variant="h3"
@@ -114,9 +105,9 @@ function Login() {
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="usuario"
               label="usuario"
-              variant="outlined"
               name="usuario"
               margin="normal"
+              variant="outlined"
               type="text"
               fullWidth
               className="custom-txfield"
@@ -131,7 +122,7 @@ function Login() {
               margin="normal"
               type="password"
               fullWidth
-              className="custom-txfield"
+              className="custom-txfield "
             />
             <Box marginTop={2} textAlign="center">
               <Button
@@ -151,16 +142,21 @@ function Login() {
           </form>
           <Box display="flex" justifyContent="center" marginTop={2}>
             <Box marginRight={1}>
-              <Typography variant="subtitle1" gutterBottom align="center" className="" >
-                Não tem uma conta?
-              </Typography>
-            </Box>
-            <Link to="/cadastro">
               <Typography
                 variant="subtitle1"
                 gutterBottom
                 align="center"
-                className="textosC text-decorator-none"
+                className=""
+              >
+                Não tem uma conta?
+              </Typography>
+            </Box>
+            <Link to="/cadastro" className="text-decorator-none">
+              <Typography
+                variant="subtitle1"
+                gutterBottom
+                align="center"
+                className="textosC"
               >
                 {" "}
                 Cadastre-se

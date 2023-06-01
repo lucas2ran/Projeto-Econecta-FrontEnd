@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap');
+
+
 .topo{
     margin-top: 20px;
 }
@@ -6,3 +9,40 @@
     color: red !important;
 }
 
+.titulotema {
+    color: #09221a !important;
+    font-weight: bold !important;
+    font-family: "Passion One", sans-serif !important;
+    font-weight: 700 !important;
+}
+
+.textotema {
+    font-size: 20px !important;
+    color: black !important;
+}
+
+.botaocadtema {
+    borderColor: white !important;
+    backgroundColor: #09221a !important;
+    color: white !important;
+}
+
+.bgcadtema {
+    background-image: url('https://ik.imagekit.io/0emfpelsr/preview.jpg?updatedAt=1684783966692');
+    background-size: cover;
+    background-position: unset;
+    min-height: 100vh;
+}
+
+.cadtemabox1 {
+    background-color: white;
+    margin-top: 35px;
+    padding-top: 20px;
+}
+
+.cadtemabox2 {
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}

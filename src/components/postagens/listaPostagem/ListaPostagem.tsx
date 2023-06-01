@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
-import { Box } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import './ListaPostagem.css';
 import Postagem from '../../../models/Postagem';
 import { busca, post } from '../../../services/Service';
@@ -8,6 +8,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
+
 
 function ListaPostagem() {
   const [posts, setPosts] = useState<Postagem[]>([])
@@ -48,9 +49,18 @@ function ListaPostagem() {
 
   return (
     <>
-      {
+
+    <body className="bgpost">
+
+    <Box className='bgtitulopost'>
+        <Typography variant="h3" color="textSecondary" component="h1" align="center" className="titulopost">Arquivo de posts</Typography>
+    </Box>
+
+    <Box display="flex" flexDirection="row" >
+    {
         posts.map(post => (
-          <Box m={2} >
+
+          <Box m={2}>
             <Card variant="outlined">
               <CardContent>
                 <Typography color="textSecondary" gutterBottom>
@@ -73,16 +83,28 @@ function ListaPostagem() {
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>
 
-                  <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none" >
+                  <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none">
                     <Box mx={1}>
-                      <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                      <Button variant="contained" className="marginLeft outlinedButtonC" size='small'
+                      style={{
+                        borderColor: "white",
+                        backgroundColor: "#09221a",
+                        color: "white",
+                        fontWeight: "bold"
+                      }}>
                         atualizar
                       </Button>
                     </Box>
                   </Link>
                   <Link to={`/deletarPostagem/${post.id}`} className="text-decorator-none">
                     <Box mx={1}>
-                      <Button variant="contained" size='small' color="secondary">
+                      <Button variant="contained" size='small' className='outlinedButtonC'
+                      style={{
+                        borderColor: "white",
+                        backgroundColor: "#09221a",
+                        color: "white",
+                        fontWeight: "bold"
+                      }}>
                         deletar
                       </Button>
                     </Box>
@@ -93,6 +115,10 @@ function ListaPostagem() {
           </Box>
         ))
       }
+    </Box>
+        
+    </body>
+    
     </>)
 }
 
