@@ -15,6 +15,7 @@ import { useSelector } from "react-redux";
 import { TokenState } from "../../store/tokens/tokensReducer";
 import { toast } from "react-toastify";
 import "react-alice-carousel/lib/alice-carousel.css";
+import { blue } from "@material-ui/core/colors";
 function Sobre() {
   let navigate = useNavigate();
   const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -106,40 +107,90 @@ function Sobre() {
         </AppBar>
       </Grid>
 
+
+    <Grid display="flex" flexDirection="row">
       <Box
         display="flex"
-        flexDirection="row"
+        flexDirection="column"
         justifyContent="space-between"
-        paddingX="10px"
+        padding="1%"        
+        style={{backgroundColor: "#f79031", width: "100%"}}
       >
+
+        <img
+          src="https://github.com/chris-kauffmann.png"
+          style={{ borderRadius: "300px", height: "200px", width: "200px"}}
+        />
+
+            <Typography
+              variant="h5"
+              gutterBottom
+              color="textPrimary"
+              component="h3"
+              align="center"
+              className="titulo"
+            >Christine Kauffman
+            </Typography>
+
+              <Typography> 
+              Econecta é uma rede social sustentável que une pessoas com o mesmo
+              ideal. Com criatividade e simplicidade, a Econecta é uma
+              plataforma que ajuda a promover um estilo de vida mais sustentável
+              e colaborativo, enquanto ajuda a salvar o planeta. Junte-se a nós
+              e comece a transformar o mundo em um lugar melhor, um passo de
+              cada vez.
+            </Typography>
+
         <a
           href="https://www.linkedin.com/in/christine-outi-kauffmann/"
           target="_blank"
         >
           <LinkedInIcon className="redes" />
         </a>
-        <img
-          src="https://github.com/chris-kauffmann.png"
-          style={{ borderRadius: "300px", height: "300px", width: "300px" }}
-        />
+       </Box>
 
-        <Box display="flex" flexDirection="row" justifyContent="space-between">
-          <a
-            href="https://www.linkedin.com/in/julia-guarnieri-dev/"
-            target="blank"
-          >
+        <Box display="flex" 
+        flexDirection="column" 
+        justifyContent="space-between"
+        padding="1%"
+        style={{backgroundColor: "#e65847"}}>
             <img
               src="https://github.com/jubbeez.png"
-              style={{ borderRadius: "300px", height: "300px", width: "300px" }}
+              style={{ borderRadius: "300px", height: "200px", width: "200px" }}
             />
-          </a>
+
+            <Typography
+              variant="h5"
+              gutterBottom
+              color="textPrimary"
+              component="h3"
+              align="center"
+              className="titulo"
+            >Júlia Guarnieri
+            </Typography>
+
+
+          <Typography> 
+              Econecta é uma rede social sustentável que une pessoas com o mesmo
+              ideal. Com criatividade e simplicidade, a Econecta é uma
+              plataforma que ajuda a promover um estilo de vida mais sustentável
+              e colaborativo, enquanto ajuda a salvar o planeta. Junte-se a nós
+              e comece a transformar o mundo em um lugar melhor, um passo de
+              cada vez.
+            </Typography>
+
+            <a
+            href="https://www.linkedin.com/in/julia-guarnieri-dev/"
+            target="blank"
+          ><LinkedInIcon className="redes" /></a>
         </Box>
 
         <Box
           display="flex"
           flexDirection="row"
           justifyContent="space-between"
-          paddingX="10px"
+          padding="1%"
+          style={{backgroundColor: "#f79031"}}
         >
           <a
             href="https://www.linkedin.com/in/juliana-inocencio/"
@@ -147,16 +198,17 @@ function Sobre() {
           >
             <img
               src="https://github.com/juliana-inocencio.png"
-              style={{ borderRadius: "300px", height: "300px", width: "300px" }}
+              style={{ borderRadius: "300px", height: "200px", width: "200px" }}
             />
           </a>
         </Box>
 
-        <Box
-          display="flex"
-          flexDirection="row"
-          justifyContent="space-between"
-          paddingX="10px"
+
+        <Box display="flex" 
+        flexDirection="column" 
+        justifyContent="space-between"
+        padding="1%"
+          style={{backgroundColor: "#f73390"}}
         >
           <a
             href="https://www.linkedin.com/in/lucasviniciusxavier/"
@@ -164,16 +216,17 @@ function Sobre() {
           >
             <img
               src="https://github.com/lucas2ran.png"
-              style={{ borderRadius: "300px", height: "300px", width: "300px" }}
+              style={{ borderRadius: "300px", height: "200px", width: "200px" }}
             />
           </a>
         </Box>
 
-        <Box
-          display="flex"
-          flexDirection="row"
-          justifyContent="space-between"
-          paddingX="10px"
+
+        <Box display="flex" 
+        flexDirection="column" 
+        justifyContent="space-between"
+        padding="1%"
+        style={{backgroundColor: "#f58157"}}
         >
           <a
             href="https://www.linkedin.com/in/renan-gon%C3%A7alvez-a2416926b/"
@@ -181,25 +234,116 @@ function Sobre() {
           >
             <img
               src="https://github.com/RenanG7.png"
-              style={{ borderRadius: "300px", height: "300px", width: "300px" }}
+              style={{ borderRadius: "300px", height: "200px", width: "200px" }}
             />
           </a>
         </Box>
 
-        <Box
-          display="flex"
-          flexDirection="row"
-          justifyContent="space-between"
-          paddingX="10px"
+
+        <Box display="flex" 
+        flexDirection="column" 
+        justifyContent="space-between"
+        padding="1%"
+          style={{backgroundColor: "#f33876"}}
         >
           <a href="https://www.linkedin.com/in/larissaparecida/" target="blank">
             <img
               src="https://github.com/lariaparecida.png"
-              style={{ borderRadius: "300px", height: "300px", width: "300px" }}
+              style={{ borderRadius: "300px", height: "200px", width: "200px" }}
+            />
+          </a>
+
+          <Typography>
+          Desde criança sou apaixonada por computadores, e encontrei na programação a oportunidade de transformar vidas criando facilidades. 
+          Com habilidades em Java, MySQL, Spring Boot, React e muito mais, estou em busca de um desafio profissional que me permita aplicar minha dedicação e paixão por esse campo fascinante.
+          </Typography>
+        </Box>
+     </Grid>
+{/* separaaaaaaaaaaaaa */}
+     <Grid>
+     <Box
+        padding="2%"        
+        style={{backgroundColor: "black"}}
+      >
+
+        <img
+          src="https://github.com/chris-kauffmann.png"
+          style={{ borderRadius: "300px", height: "100px", width: "100px" }}        />
+
+        <a
+          href="https://www.linkedin.com/in/christine-outi-kauffmann/"
+          target="_blank"
+        >
+          <LinkedInIcon className="redes" />
+        </a>
+       </Box>
+
+        <Box
+        padding="2%"
+        style={{backgroundColor: "black"}}>
+            <img
+              src="https://github.com/jubbeez.png"
+              style={{ borderRadius: "300px", height: "100px", width: "100px" }}            />
+            <a
+            href="https://www.linkedin.com/in/julia-guarnieri-dev/"
+            target="blank"
+          ><LinkedInIcon className="redes" /></a>
+        </Box>
+
+        <Box
+          padding="2%"
+          style={{backgroundColor: "black"}}
+        >
+          <a
+            href="https://www.linkedin.com/in/juliana-inocencio/"
+            target="blank"
+          >
+            <img
+              src="https://github.com/juliana-inocencio.png"
+              style={{ borderRadius: "300px", height: "100px", width: "100px" }}            />
+          </a>
+        </Box>
+
+        <Box
+          padding="2%"
+          style={{backgroundColor: "black"}}
+        >
+          <a
+            href="https://www.linkedin.com/in/lucasviniciusxavier/"
+            target="blank"
+          >
+            <img
+              src="https://github.com/lucas2ran.png"
+              style={{ borderRadius: "300px", height: "100px", width: "100px" }}            />
+          </a>
+        </Box>
+
+        <Box
+          padding="2%"
+          style={{backgroundColor: "black"}}
+        >
+          <a
+            href="https://www.linkedin.com/in/renan-gon%C3%A7alvez-a2416926b/"
+            target="blank"
+          >
+            <img
+              src="https://github.com/RenanG7.png"
+              style={{ borderRadius: "300px", height: "100px", width: "100px" }}            />
+          </a>
+        </Box>
+
+        <Box
+          paddingX="2%"
+          style={{backgroundColor: "black"}}
+        >
+          <a href="https://www.linkedin.com/in/larissaparecida/" target="blank">
+            <img
+              src="https://github.com/lariaparecida.png"
+              style={{ borderRadius: "300px", height: "100px", width: "100px" }}
             />
           </a>
         </Box>
-      </Box>
+     </Grid>
     </>
   );
 }
