@@ -55,12 +55,10 @@ if(token != "") {
     </footer>
 }
 
-  return (
-    
+  return ( 
     <>
     {footerComponent}
     </>
-
   );
 }
 
