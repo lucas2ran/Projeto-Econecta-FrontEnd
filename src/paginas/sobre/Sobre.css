@@ -40,4 +40,16 @@
 
 /* .image {
   align-items: center !important;
-} */
+} pra cima nosso */
+
+.desenvolvedores {
+  border-radius: 50% !important;
+  width: 150px !important;
+  margin-top: 10px !important;
+}
+
+.equipe {
+  display: flex !important;
+  align-items: center !important;
+  margin: auto !important;
+}

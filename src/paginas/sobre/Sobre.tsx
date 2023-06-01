@@ -1,7 +1,15 @@
 import React, { useEffect } from "react";
-
-import { Divider, Grid, Typography } from "@mui/material";
-
+import {
+  AppBar,
+  Box,
+  Divider,
+  Grid,
+  Tab,
+  Tabs,
+  Typography,
+} from "@mui/material";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../store/tokens/tokensReducer";
@@ -31,8 +39,14 @@ function Sobre() {
 
   return (
     <>
-      <Grid container direction="row" className="caixa">
-        <Grid item xs={6}>
+      <Grid
+        container
+        alignItems={"center"}
+        py={2}
+        direction="row"
+        className="caixa"
+      >
+        <Grid xs={6}>
           <Typography
             variant="h3"
             gutterBottom
@@ -44,10 +58,7 @@ function Sobre() {
             Imagine um estilo de vida onde você pode transformar itens que iriam
             para o lixo em novas peças incríveis?
           </Typography>
-        </Grid>
-
-        <Grid container>
-          <Grid item xs>
+          <Box display="flex" alignItems={"center"}>
             <Typography
               variant="h5"
               gutterBottom
@@ -64,10 +75,8 @@ function Sobre() {
               detox das outras redes sociais. Venha transformar sua experiência
               online e fazer a diferença no mundo. Junte-se à Econecta agora!
             </Typography>
-          </Grid>
 
-          <Divider orientation="vertical" flexItem></Divider>
-          <Grid item xs>
+            <Divider orientation="vertical" flexItem></Divider>
             <Typography
               variant="h5"
               gutterBottom
@@ -83,12 +92,114 @@ function Sobre() {
               e comece a transformar o mundo em um lugar melhor, um passo de
               cada vez.
             </Typography>
-          </Grid>
-          <Grid xs={6} alignContent={"center"} textAlign={"center"}>
-            <img src="https://ik.imagekit.io/0emfpelsr/four-save-planet-set-icons_603843-3157.avif?updatedAt=1684785329029" />
-          </Grid>
+          </Box>
+        </Grid>
+        <Grid xs={6} alignContent={"center"} textAlign={"center"}>
+          <img src="https://ik.imagekit.io/0emfpelsr/four-save-planet-set-icons_603843-3157.avif?updatedAt=1684785329029" />
         </Grid>
       </Grid>
+      <Grid container xs={12}>
+        <AppBar position="static" style={{ backgroundColor: "#f5ebdd" }}>
+          <Tabs centered indicatorColor="secondary">
+            <Tab label="Desenvolvedores" value="1" className="font-text" />
+          </Tabs>
+        </AppBar>
+      </Grid>
+
+      <Box
+        display="flex"
+        flexDirection="row"
+        justifyContent="space-between"
+        paddingX="10px"
+      >
+        <a
+          href="https://www.linkedin.com/in/christine-outi-kauffmann/"
+          target="_blank"
+        >
+          <LinkedInIcon className="redes" />
+        </a>
+        <img
+          src="https://github.com/chris-kauffmann.png"
+          style={{ borderRadius: "300px", height: "300px", width: "300px" }}
+        />
+
+        <Box display="flex" flexDirection="row" justifyContent="space-between">
+          <a
+            href="https://www.linkedin.com/in/julia-guarnieri-dev/"
+            target="blank"
+          >
+            <img
+              src="https://github.com/jubbeez.png"
+              style={{ borderRadius: "300px", height: "300px", width: "300px" }}
+            />
+          </a>
+        </Box>
+
+        <Box
+          display="flex"
+          flexDirection="row"
+          justifyContent="space-between"
+          paddingX="10px"
+        >
+          <a
+            href="https://www.linkedin.com/in/juliana-inocencio/"
+            target="blank"
+          >
+            <img
+              src="https://github.com/juliana-inocencio.png"
+              style={{ borderRadius: "300px", height: "300px", width: "300px" }}
+            />
+          </a>
+        </Box>
+
+        <Box
+          display="flex"
+          flexDirection="row"
+          justifyContent="space-between"
+          paddingX="10px"
+        >
+          <a
+            href="https://www.linkedin.com/in/lucasviniciusxavier/"
+            target="blank"
+          >
+            <img
+              src="https://github.com/lucas2ran.png"
+              style={{ borderRadius: "300px", height: "300px", width: "300px" }}
+            />
+          </a>
+        </Box>
+
+        <Box
+          display="flex"
+          flexDirection="row"
+          justifyContent="space-between"
+          paddingX="10px"
+        >
+          <a
+            href="https://www.linkedin.com/in/renan-gon%C3%A7alvez-a2416926b/"
+            target="blank"
+          >
+            <img
+              src="https://github.com/RenanG7.png"
+              style={{ borderRadius: "300px", height: "300px", width: "300px" }}
+            />
+          </a>
+        </Box>
+
+        <Box
+          display="flex"
+          flexDirection="row"
+          justifyContent="space-between"
+          paddingX="10px"
+        >
+          <a href="https://www.linkedin.com/in/larissaparecida/" target="blank">
+            <img
+              src="https://github.com/lariaparecida.png"
+              style={{ borderRadius: "300px", height: "300px", width: "300px" }}
+            />
+          </a>
+        </Box>
+      </Box>
     </>
   );
 }
