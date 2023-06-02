@@ -41,19 +41,59 @@ function Home() {
 
   const items = [
     <img
-      src="https://cdn.discordapp.com/attachments/1094734846821138462/1113110623115554897/screenshot-17-6.png"
+      src="https://www.decorfacil.com/wp-content/uploads/2019/04/20190425upcycling-6.jpg"
       role="presentation"
-      style={{ marginTop: "1%", width: "80%", height: "300px" }}
+      style={{ marginTop: "20%", width: "100%", height: "350px" }}
     />,
     <img
-      src="https://cdn.discordapp.com/attachments/1094734846821138462/1113110996052103281/set-items-secondary-use-upcycling_530689-775.png"
+      src="https://www.decorfacil.com/wp-content/uploads/2019/04/20190425upcycling-20.jpg"
       role="presentation"
-      style={{ marginTop: "1%", width: "80%", height: "300px" }}
+      style={{ marginTop: "20%", width: "100%", height: "350px" }}
     />,
     <img
-      src="https://cdn.discordapp.com/attachments/1094734846821138462/1113111083960520724/upcycle-plastic-bottles-5526525-4622611.png"
+      src="https://www.decorfacil.com/wp-content/uploads/2019/04/20190425upcycling-22.jpg"
       role="presentation"
-      style={{ marginTop: "1%", width: "80%", height: "300px" }}
+      style={{
+        marginTop: "20%",
+        width: "100%",
+        height: "350px",
+      }}
+    />,
+    <img
+      src="https://www.decorfacil.com/wp-content/uploads/2019/04/20190425upcycling-33.jpg"
+      role="presentation"
+      style={{
+        marginTop: "20%",
+        width: "100%",
+        height: "350px",
+      }}
+    />,
+    <img
+      src="https://www.decorfacil.com/wp-content/uploads/2019/04/20190425upcycling-47.jpg"
+      role="presentation"
+      style={{
+        marginTop: "20%",
+        width: "100%",
+        height: "350px",
+      }}
+    />,
+    <img
+      src="https://www.decorfacil.com/wp-content/uploads/2019/04/20190425upcycling-52.jpg"
+      role="presentation"
+      style={{
+        marginTop: "20%",
+        width: "100%",
+        height: "350px",
+      }}
+    />,
+    <img
+      src="https://www.decorfacil.com/wp-content/uploads/2019/04/20190425upcycling-59.jpg"
+      role="presentation"
+      style={{
+        marginTop: "20%",
+        width: "100%",
+        height: "350px",
+      }}
     />,
   ];
 
@@ -66,18 +106,9 @@ function Home() {
         alignItems="center"
         className="caixa"
       >
-        <Grid item xs={12}>
-          <AliceCarousel
-            mouseTracking
-            items={items}
-            autoPlay
-            autoPlayInterval={1000}
-            infinite
-            responsive={responsive}
-          />
-        </Grid>
+        <Grid item xs={12}></Grid>
 
-        <Grid alignItems="center" item xs={8}>
+        <Grid alignItems="center" item xs={6}>
           <Box paddingX={20}>
             <Typography
               variant="h3"
@@ -100,7 +131,22 @@ function Home() {
               expresse aqui os seus pensamentos e opiniões!
             </Typography>
           </Box>
+        </Grid>
+        <Grid xs={6} paddingRight={"20px"}>
+          <AliceCarousel
+            animationType="fadeout"
+            mouseTracking
+            items={items}
+            disableButtonsControls
+            autoPlay
+            autoPlayInterval={1000}
+            infinite
+            responsive={responsive}
+          />
+        </Grid>
 
+        <Grid xs={12} className="postagens bgHome">
+          <TabPostagem />
           <Box display="flex" justifyContent="center">
             <Box marginRight={1}>
               <ModalPostagem />
@@ -112,10 +158,6 @@ function Home() {
               </Button>
             </Link>
           </Box>
-        </Grid>
-
-        <Grid xs={12} className="postagens">
-          <TabPostagem />
         </Grid>
       </Grid>
     </>
