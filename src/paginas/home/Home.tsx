@@ -1,7 +1,11 @@
 import React, { useEffect } from "react";
 import { Button } from "@material-ui/core";
-import { Grid, Typography } from "@mui/material";
-import { Box } from "@mui/material";
+import { Grid, Typography,  AppBar,
+  Box,
+  Divider,
+  Tab,
+  Tabs,
+} from "@mui/material";
 import "./Home.css";
 import ModalPostagem from "../../components/postagens/modalPostagem/ModalPostagem";
 import { useNavigate, Link } from "react-router-dom";
@@ -11,6 +15,10 @@ import TabPostagem from "../../components/postagens/tabPostagem/TabPostagem";
 import { toast } from "react-toastify";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import ListaPostagem from "../../components/postagens/listaPostagem/ListaPostagem";
+
 function Home() {
   let navigate = useNavigate();
   const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -146,8 +154,8 @@ function Home() {
         </Grid>
 
         <Grid xs={12} className="postagens bgHome">
-          <TabPostagem />
-          <Box display="flex" justifyContent="center">
+                    <TabPostagem />
+<Box display="flex" justifyContent="center">
             <Box marginRight={1}>
               <ModalPostagem />
             </Box>
@@ -158,7 +166,234 @@ function Home() {
               </Button>
             </Link>
           </Box>
+          <ListaPostagem/>
         </Grid>
+      </Grid>
+
+      <Grid container xs={12}>
+        <AppBar position="static" style={{ backgroundColor: "#f5ebdd" }}>
+          <Tabs centered indicatorColor="secondary">
+            <Tab label="Desenvolvedores" value="1" className="font-text" />
+          </Tabs>
+        </AppBar>
+      </Grid>
+    
+      <Grid display="flex">
+        <Box 
+        display="flex"
+        padding="2%" style={{ backgroundColor: "#1d5040", width:"20%"}}>
+          <img
+            src="https://github.com/chris-kauffmann.png"
+            style={{ borderRadius: "300px", height: "100px", width: "100px" }}
+          />
+
+          <Box className="textinhoLinkedinGithub" style={{paddingLeft:"5%"}}>
+
+            <Typography
+            variant="h5"
+            gutterBottom
+            color="textPrimary"
+            component="h3"
+            align="center"
+            style={{color:"white"}}
+          >
+            Christine Kauffmann
+            </Typography>
+
+              <Box display="flex">
+                <a
+                  href="https://www.linkedin.com/in/christine-outi-kauffmann/"
+                  target="blank"
+                >
+                  <LinkedInIcon fontSize="large" style={{ color: "white", fontSize: "50px"}} />
+                </a>
+
+                <a href="https://github.com/chris-kauffmann" target="blank">
+                  <GitHubIcon fontSize="large" style={{ color: "white",  fontSize: "50px"}} />
+                </a>
+              </Box>
+          </Box>
+        </Box>
+
+    
+        <Box 
+        display="flex"
+        padding="2%" style={{ backgroundColor: "#1d5040", width:"20%"}}>
+          <img
+            src="https://github.com/jubbeez.png"
+            style={{ borderRadius: "300px", height: "100px", width: "100px" }}
+          />
+
+        <Box className="textinhoLinkedinGithub" style={{paddingLeft:"5%"}}>
+
+        <Typography
+            variant="h5"
+            gutterBottom
+            color="textPrimary"
+            component="h3"
+            align="center"
+            style={{color:"white"}}
+          >
+            Júlia Guarnieri
+        </Typography>
+
+              <Box display="flex">
+                <a
+                  href="https://www.linkedin.com/in/julia-guarnieri-dev/"
+                  target="blank"
+                >
+                  <LinkedInIcon fontSize="large" style={{ color: "white", fontSize: "50px"}} />
+                </a>
+
+                <a href="https://github.com/jubbeez" target="blank">
+                  <GitHubIcon fontSize="large" style={{ color: "white",  fontSize: "50px"}} />
+                </a>
+              </Box>
+          </Box>
+        </Box>
+
+        <Box 
+        display="flex"
+        padding="2%" style={{ backgroundColor: "#1d5040" , width:"20%"}}>
+          <img
+            src="https://github.com/juliana-inocencio.png"
+            style={{ borderRadius: "300px", height: "100px", width: "100px" }}
+          />
+
+      <Box className="textinhoLinkedinGithub" style={{paddingLeft:"5%"}}>
+
+
+            <Typography
+            variant="h5"
+            gutterBottom
+            color="textPrimary"
+            component="h3"
+            align="center"
+            style={{color:"white"}}
+          >
+            Juliana Inocencio
+        </Typography>
+
+          <Box display="flex">
+            <a
+              href="https://www.linkedin.com/in/juliana-inocencio/"
+              target="blank"
+            >
+              <LinkedInIcon fontSize="large" style={{ color: "white", fontSize: "50px"}} />
+            </a>
+
+            <a href="https://github.com/juliana-inocencio" target="blank">
+              <GitHubIcon fontSize="large" style={{ color: "white",  fontSize: "50px"}} />
+            </a>
+          </Box>
+          </Box>
+        </Box>
+
+        <Box 
+        display="flex"
+        padding="2%" style={{ backgroundColor: "#1d5040" , width:"20%"}}>
+          <img
+            src="https://github.com/lucas2ran.png"
+            style={{ borderRadius: "300px", height: "100px", width: "100px" }}
+          />
+
+      <Box className="textinhoLinkedinGithub" style={{paddingLeft:"5%"}}>
+            <Typography
+            variant="h5"
+            gutterBottom
+            color="textPrimary"
+            component="h3"
+            align="center"
+            style={{color:"white"}}
+          >
+            Lucas Vinícius
+            </Typography>
+
+          <Box display="flex">
+            <a
+              href="https://www.linkedin.com/in/lucasviniciusxavier/"
+              target="blank"
+            >
+              <LinkedInIcon fontSize="large" style={{ color: "white", fontSize: "50px"}} />
+            </a>
+
+            <a href="https://github.com/lucas2ran" target="blank">
+              <GitHubIcon fontSize="large" style={{ color: "white",  fontSize: "50px"}} />
+            </a>
+          </Box>
+          </Box>
+        </Box>
+
+        <Box 
+        display="flex"
+        padding="2%" style={{ backgroundColor: "#1d5040" , width:"20%"}}>
+          <img
+            src="https://github.com/RenanG7.png"
+            style={{ borderRadius: "300px", height: "100px", width: "100px" }}
+          />
+
+      <Box className="textinhoLinkedinGithub" style={{paddingLeft:"5%"}}>
+
+
+          <Typography
+            variant="h5"
+            gutterBottom
+            color="textPrimary"
+            component="h3"
+            align="center"
+            style={{color:"white"}}
+          >
+            Renan Gonçalves
+            </Typography>
+          <Box display="flex">
+            <a
+              href="https://www.linkedin.com/in/renan-gon%C3%A7alvez-a2416926b/"
+              target="blank"
+            >
+              <LinkedInIcon fontSize="large" style={{ color: "white", fontSize: "50px"}} />
+            </a>
+
+            <a href="https://github.com/RenanG7" target="blank">
+              <GitHubIcon fontSize="large" style={{ color: "white",  fontSize: "50px"}} />
+            </a>
+          </Box>
+          </Box>
+        </Box>
+
+        <Box 
+        display="flex"
+        padding="2%" style={{ backgroundColor: "#1d5040" , width:"20%"}}>
+          <img
+            src="https://github.com/lariaparecida.png"
+            style={{ borderRadius: "300px", height: "100px", width: "100px" }}
+          />
+
+      <Box className="textinhoLinkedinGithub" style={{paddingLeft:"5%"}}>
+
+          <Typography
+            variant="h5"
+            gutterBottom
+            color="textPrimary"
+            component="h3"
+            align="center"
+            style={{color:"white"}}
+          >
+            Larissa Aparecida
+            </Typography>
+          <Box display="flex">
+            <a
+              href="https://www.linkedin.com/in/larissaparecida/"
+              target="blank"
+            >
+              <LinkedInIcon fontSize="large" style={{ color: "white", fontSize: "50px"}} />
+            </a>
+
+            <a href="https://github.com/lariaparecida" target="blank">
+              <GitHubIcon fontSize="large" style={{ color: "white",  fontSize: "50px"}} />
+            </a>
+          </Box>
+        </Box>
+    </Box>
       </Grid>
     </>
   );

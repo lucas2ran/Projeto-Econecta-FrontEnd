@@ -55,7 +55,7 @@ function ListaPostagem() {
       <Box display="flex" flexDirection="row">
         {posts.map((post) => (
           <Box m={2}>
-            <Card variant="outlined">
+            <Card variant="outlined" style={{width:"350px", height:"600px"}}>
               <CardMedia
                 component="img"
                 height="140"
@@ -78,7 +78,7 @@ function ListaPostagem() {
                   Postado por: {post.usuario?.nome}
                 </Typography>
               </CardContent>
-              <CardActions>
+              <CardActions style={{paddingTop:"60px"}}>
                 <Box display="flex" justifyContent="center" mb={1.5}>
                   <Link
                     to={`/formularioPostagem/${post.id}`}
