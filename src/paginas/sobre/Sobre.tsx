@@ -114,7 +114,7 @@ function Sobre() {
         flexDirection="column"
         justifyContent="space-between"
         padding="1%"        
-        style={{backgroundColor: "#f79031", width: "100%"}}
+        style={{backgroundColor: "#f79031"}}
       >
 
         <img
@@ -181,8 +181,15 @@ function Sobre() {
 
             <a
             href="https://www.linkedin.com/in/julia-guarnieri-dev/"
-            target="blank"
+            target="_blank"
           ><LinkedInIcon className="redes" /></a>
+
+<a
+          href="https://www.linkedin.com/in/christine-outi-kauffmann/"
+          target="_blank"
+        >
+          <LinkedInIcon className="redes" />
+        </a>
         </Box>
 
         <Box
@@ -201,6 +208,13 @@ function Sobre() {
               style={{ borderRadius: "300px", height: "200px", width: "200px" }}
             />
           </a>
+
+          <a
+          href="https://www.linkedin.com/in/christine-outi-kauffmann/"
+          target="_blank"
+        >
+          <LinkedInIcon className="redes" />
+        </a>
         </Box>
 
 
@@ -208,7 +222,7 @@ function Sobre() {
         flexDirection="column" 
         justifyContent="space-between"
         padding="1%"
-          style={{backgroundColor: "#f73390"}}
+          style={{backgroundColor: "#e65847"}}
         >
           <a
             href="https://www.linkedin.com/in/lucasviniciusxavier/"
@@ -219,6 +233,13 @@ function Sobre() {
               style={{ borderRadius: "300px", height: "200px", width: "200px" }}
             />
           </a>
+
+          <a
+          href="https://www.linkedin.com/in/christine-outi-kauffmann/"
+          target="_blank"
+        >
+          <LinkedInIcon className="redes" />
+        </a>
         </Box>
 
 
@@ -226,7 +247,7 @@ function Sobre() {
         flexDirection="column" 
         justifyContent="space-between"
         padding="1%"
-        style={{backgroundColor: "#f58157"}}
+        style={{backgroundColor: "#f79031"}}
         >
           <a
             href="https://www.linkedin.com/in/renan-gon%C3%A7alvez-a2416926b/"
@@ -237,6 +258,13 @@ function Sobre() {
               style={{ borderRadius: "300px", height: "200px", width: "200px" }}
             />
           </a>
+
+          <a
+          href="https://www.linkedin.com/in/christine-outi-kauffmann/"
+          target="blank"
+        >
+          <LinkedInIcon className="redes" />
+        </a>
         </Box>
 
 
@@ -244,19 +272,41 @@ function Sobre() {
         flexDirection="column" 
         justifyContent="space-between"
         padding="1%"
-          style={{backgroundColor: "#f33876"}}
+          style={{backgroundColor: "#e65847"}}
         >
-          <a href="https://www.linkedin.com/in/larissaparecida/" target="blank">
             <img
               src="https://github.com/lariaparecida.png"
               style={{ borderRadius: "300px", height: "200px", width: "200px" }}
             />
-          </a>
+
+          <Typography
+              variant="h5"
+              gutterBottom
+              color="textPrimary"
+              component="h3"
+              align="center"
+              className="titulo"
+            >Larissa Aparecida
+            </Typography>
 
           <Typography>
           Desde criança sou apaixonada por computadores, e encontrei na programação a oportunidade de transformar vidas criando facilidades. 
           Com habilidades em Java, MySQL, Spring Boot, React e muito mais, estou em busca de um desafio profissional que me permita aplicar minha dedicação e paixão por esse campo fascinante.
           </Typography>
+
+          <a
+          href="https://www.linkedin.com/in/larissaparecida/"
+          target="blank"
+        >
+          <LinkedInIcon className="redes" />
+        </a>
+
+                  <a
+          href="https://www.linkedin.com/in/christine-outi-kauffmann/"
+          target="blank"
+        >
+          <LinkedInIcon className="redes" />
+        </a>
         </Box>
      </Grid>
 {/* separaaaaaaaaaaaaa */}
