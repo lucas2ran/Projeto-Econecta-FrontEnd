@@ -289,7 +289,7 @@ function Sobre() {
             </a>
 
             <a href="https://github.com/lucas2ran" target="blank">
-              <GitHubIcon fontSize="large" style={{ color: "white" }} />{" "}
+              <GitHubIcon fontSize="large" style={{ color: "white", fontSize: "70px" }} />{" "}
             </a>
           </Box>
         </Box>
