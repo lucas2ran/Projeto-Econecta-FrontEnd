@@ -1,16 +1,15 @@
 .titulotema {
-    color: orangered !important;
-    font-weight: bold !important;
-    font-family: "Passion One", sans-serif !important;
-    font-weight: 700 !important;
+  color: orangered !important;
+  font-weight: bold !important;
+  font-family: "Passion One", sans-serif !important;
+  font-weight: 700 !important;
 }
 
-
 .bgposttemas {
-    background-image: url('https://ik.imagekit.io/0emfpelsr/preview.jpg?updatedAt=1684783966692');
-    background-size: cover !important;
-    background-position: unset;
-    min-height: 100vh;
+  background-image: url("https://ik.imagekit.io/0emfpelsr/preview.jpg?updatedAt=1684783966692");
+  background-size: cover !important;
+  background-position: unset;
+  min-height: 100vh;
 }
 
 /* .displayFlex {
@@ -19,6 +18,6 @@
 } */
 
 .outlinedButtonD:hover {
-    background-color: #09221a !important;
-    color: #fdfcfd !important;
+  background-color: #f34d26 !important;
+  color: #fdfcfd !important;
 }

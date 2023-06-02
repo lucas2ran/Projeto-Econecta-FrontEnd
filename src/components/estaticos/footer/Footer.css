@@ -1,17 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap");
+
 .footer {
-    background-color: #000000;
-    color: #fff;
-  }
-  
-  .iconesFooter {
-    font-size: 3rem;
-  }
-  
-  .iconeInd {
-    color: #fff;
-  }
-  
-  .iconeInd:hover {
-    color: #262121;
-    cursor: pointer;
-  }
+  background-color: #000000;
+  color: #fff;
+}
+
+.iconesFooter {
+  font-size: 3rem;
+}
+
+.iconeInd {
+  color: #065408;
+}
+
+.iconeInd:hover {
+  color: #3fb844;
+  cursor: pointer;
+}
+
+.font {
+  font-family: Georgia, "Signika Negative", sans-serif !important;
+}

@@ -1,36 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap");
 
 .caixa {
   background-color: #f34d26;
-  }
-  
-  .titulo {
-      color: #f5ebdd !important;
-      font-weight: bold !important;
-      font-family: "Passion One", sans-serif !important;
-      font-weight: 700 !important;
-  }
-  
-  .botão {
-      border-color: white !important;
-      background-color: white !important;
-      color: #f34d26 !important;
-      font-weight: bold !important;
-  }
+}
 
-  .botão:hover {
-    background-color: #f09c89 !important;
-  }
-  
-  .postagens {
-      background-color: white;
-  }
-  
-  .text-decorator-none {
-      text-decoration: none;
-  }
+.titulo {
+  color: #f5ebdd !important;
+  font-weight: bold !important;
+  font-family: "Passion One", sans-serif !important;
+  font-weight: 700 !important;
+}
 
-  .carousel-inner > .carousel-item > img {
-    width: 700px;
-    height: 400px; 
-  }
+.botão {
+  border-color: white !important;
+  background-color: white !important;
+  color: #f34d26 !important;
+  font-weight: bold !important;
+}
+
+.botão:hover {
+  background-color: #f09c89 !important;
+}
+
+.postagens {
+  background-color: white;
+}
+
+.text-decorator-none {
+  text-decoration: none;
+}
+
+.bgHome {
+  background-image: url("https://ik.imagekit.io/0emfpelsr/wallpaperflare.com_wallpaper__4_.jpg?updatedAt=1684778470388");
+  background-size: cover;
+  /* background-color: #407742; */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  min-height: 60vh;
+}
