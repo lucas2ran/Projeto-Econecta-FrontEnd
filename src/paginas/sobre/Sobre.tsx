@@ -395,7 +395,14 @@ function Sobre() {
 
       {/* separaaaaaaaaaaaaa */}
 
-
+      <Grid container xs={12}>
+        <AppBar position="static" style={{ backgroundColor: "#f5ebdd" }}>
+          <Tabs centered indicatorColor="secondary">
+            <Tab label="Desenvolvedores" value="1" className="font-text" />
+          </Tabs>
+        </AppBar>
+      </Grid>
+    
       <Grid display="flex">
         <Box 
         display="flex"
