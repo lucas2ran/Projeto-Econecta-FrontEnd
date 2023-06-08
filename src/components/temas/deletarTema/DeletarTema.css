@@ -1,0 +1,15 @@
+.cardDelTema {
+  width: 250px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #e8e8e8;
+}
+
+.bgDeletar {
+  background-image: url("https://ik.imagekit.io/0emfpelsr/wallpaperflare.com_wallpaper__4_.jpg?updatedAt=1684778470388");
+
+  background-size: cover !important;
+  background-position: unset;
+  min-height: 100vh;
+}

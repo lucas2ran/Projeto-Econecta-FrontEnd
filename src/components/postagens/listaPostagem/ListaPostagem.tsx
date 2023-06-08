@@ -52,15 +52,14 @@ function ListaPostagem() {
 
   return (
     <>
-      <Box display="flex" flexDirection="row">
+      <Box display="flex" flexDirection="row" className="bgpost">
         {posts.map((post) => (
           <Box m={2}>
-            <Card variant="outlined" style={{width:"350px", height:"600px"}}>
-              <CardMedia
-                component="img"
-                height="140"
-                src="https://ik.imagekit.io/0emfpelsr/elevated-view-woman-s-hand-painting-white-paint-mold.jpg?updatedAt=1685677792053"
-              />
+            <Card
+              variant="outlined"
+              style={{ width: "350px", height: "600px" }}
+            >
+              <CardMedia component="img" height="180" src={post.foto} />
               <CardContent>
                 <Typography color="textSecondary" gutterBottom>
                   Postagens
@@ -78,7 +77,7 @@ function ListaPostagem() {
                   Postado por: {post.usuario?.nome}
                 </Typography>
               </CardContent>
-              <CardActions style={{paddingTop:"60px"}}>
+              <CardActions style={{ paddingTop: "60px" }}>
                 <Box display="flex" justifyContent="center" mb={1.5}>
                   <Link
                     to={`/formularioPostagem/${post.id}`}

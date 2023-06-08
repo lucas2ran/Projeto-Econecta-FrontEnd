@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap");
+
 .container {
   background-image: url("https://img.freepik.com/fotos-gratis/conceito-de-reciclagem-lay-flat_23-2148834519.jpg?t=st=1684346518~exp=1684347118~hmac=55ebb94c82efd152ffa48317c0831eae4806ef1811795c033ade9f5181f0c0fd");
   background-repeat: no-repeat;
@@ -41,4 +43,15 @@
 .iconeIndS:hover {
   color: #3fb844 !important;
   cursor: pointer;
+}
+
+.bgSobre {
+  background-color: #3fb844;
+}
+
+.textoSobre {
+  color: #065408 !important;
+  font-weight: bold !important;
+  font-family: "Passion One", sans-serif !important;
+  font-weight: 700 !important;
 }

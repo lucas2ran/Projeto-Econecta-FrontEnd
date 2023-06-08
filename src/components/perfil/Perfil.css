@@ -1,0 +1,38 @@
+/* .bgPerfil {
+  background-image: url("https://ik.imagekit.io/0emfpelsr/wallpaperflare.com_wallpaper__4_.jpg?updatedAt=1684778470388");
+  background-repeat: no-repeat;
+  width: 100vh;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+} */
+
+.cardPerfil {
+  border-radius: 30px;
+  display: flex !important;
+  background-color: #fdfcfd;
+  padding: 2rem;
+  width: max(90vw, 500px);
+}
+
+.perfilPosts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.outlinedButtonPerfil:hover {
+  background-color: #f34d26 !important;
+  color: #fdfcfd !important;
+}
+
+.perfilContainer {
+  width: 80vw !important;
+  margin-inline: auto !important;
+  margin-block: 1.5rem !important;
+}
+
+* body {
+  background-image: url("https://ik.imagekit.io/0emfpelsr/wallpaperflare.com_wallpaper__4_.jpg?updatedAt=1684778470388");
+  background-size: cover;
+}

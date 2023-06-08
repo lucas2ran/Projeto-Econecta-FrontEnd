@@ -103,7 +103,7 @@ function CadastroTema() {
   }
 
   return (
-    <body className="bgcadtema">
+    <body>
       <Container maxWidth="sm" className="topo">
         <form onSubmit={onSubmit}>
           <Typography
@@ -126,9 +126,7 @@ function CadastroTema() {
             >
               Sobre o que você gostaria de falar?
             </Typography>
-          </div>
 
-          <div className="cadtemabox2">
             <TextField
               value={tema.descricao}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)}
@@ -146,7 +144,7 @@ function CadastroTema() {
               className="outlinedButtonCT"
               style={{
                 borderColor: "white",
-                backgroundColor: "#09221a",
+                backgroundColor: "#f34d26",
                 color: "white",
               }}
             >
