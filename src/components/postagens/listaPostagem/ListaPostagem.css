@@ -32,3 +32,11 @@
   flex: wrap;
   flex-direction: row !important;
 }
+
+.MuiInputLabel-formControl {
+  color: rgb(8, 8, 8) !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: #09221a !important;
+}

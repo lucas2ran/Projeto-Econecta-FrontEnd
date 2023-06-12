@@ -160,6 +160,7 @@ function CadastroPost() {
           color="textSecondary"
           component="h1"
           align="center"
+          className="textPost"
         >
           Formulário de cadastro postagem
         </Typography>
@@ -212,7 +213,9 @@ function CadastroPost() {
               <MenuItem value={tema.id}>{tema.descricao}</MenuItem>
             ))}
           </Select>
-          <FormHelperText>Escolha um tema para a postagem</FormHelperText>
+          <FormHelperText className="textPost">
+            Escolha um tema para a postagem
+          </FormHelperText>
           <Button
             type="submit"
             variant="contained"
