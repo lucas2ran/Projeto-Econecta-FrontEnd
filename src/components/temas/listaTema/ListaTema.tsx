@@ -113,7 +113,7 @@ function ListaTema() {
                       <Box mx={1}>
                         <Button
                           variant="contained"
-                          className="marginLeft outlinedButtonD"
+                          className="marginLeft oulinedButtonA"
                           size="small"
                           style={{
                             borderColor: "white",

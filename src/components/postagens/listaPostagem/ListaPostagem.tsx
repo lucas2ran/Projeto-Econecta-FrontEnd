@@ -73,7 +73,7 @@ function ListaPostagem() {
   return (
     <>
       <Box display="flex" flexDirection="column" className="bgpost">
-        <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+        {/* <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
           <InputLabel>Selecionar Tema</InputLabel>
           <Select onChange={(event: any) => setTema(event.target.value)}>
             <MenuItem value="">Todos os temas</MenuItem>
@@ -81,7 +81,21 @@ function ListaPostagem() {
               <MenuItem value={tema.id}>{tema.descricao}</MenuItem>
             ))}
           </Select>
-        </FormControl>
+        </FormControl> */}
+        <select
+          name="temas"
+          id="selectTemas"
+          onChange={(event: any) => setTema(event.target.value)}
+        >
+          <option value="" selected>
+            Todos os temas
+          </option>
+          {temas.map((tema) => (
+            <>
+              <option value={tema.id}>{tema.descricao}</option>
+            </>
+          ))}
+        </select>
         <Box display="flex" flexDirection="row">
           {tema == ""
             ? posts.map((post) => (
@@ -117,7 +131,7 @@ function ListaPostagem() {
                           <Box mx={1}>
                             <Button
                               variant="contained"
-                              className="marginLeft outlinedButtonC"
+                              className="marginLeft oulinedButtonA"
                               size="small"
                               style={{
                                 borderColor: "white",
