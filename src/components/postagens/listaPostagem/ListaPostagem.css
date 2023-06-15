@@ -20,8 +20,8 @@
 }
 
 .bgpost {
-  /* background-image: url('https://ik.imagekit.io/0emfpelsr/preview.jpg?updatedAt=1684783966692'); */
-  /* background-color: orangered !important; */
+  background-image: url("https://ik.imagekit.io/0emfpelsr/wallpaperflare.com_wallpaper__4_.jpg?updatedAt=1684778470388");
+
   background-size: cover !important;
   background-position: unset;
   min-height: 100vh;
@@ -31,4 +31,31 @@
   display: flex;
   flex: wrap;
   flex-direction: row !important;
+}
+
+.MuiInputLabel-formControl {
+  color: rgb(8, 8, 8) !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: #09221a !important;
+}
+
+#selectTemas {
+  padding: 0.5rem 1rem;
+  width: 40%;
+  margin: 1rem auto;
+  border-radius: 8px;
+  border: 2px solid darkgreen;
+  background-color: transparent;
+}
+
+.oulinedButtonA {
+  border-color: #09221a !important;
+  color: #fcfcfc !important;
+}
+
+.oulinedButtonA:hover {
+  background-color: #3fb844 !important;
+  color: #fdfcfd !important;
 }

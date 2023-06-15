@@ -6,7 +6,7 @@
 }
 
 .bgposttemas {
-  background-image: url("https://ik.imagekit.io/0emfpelsr/preview.jpg?updatedAt=1684783966692");
+  background-image: url("https://ik.imagekit.io/0emfpelsr/wallpaperflare.com_wallpaper__4_.jpg?updatedAt=1684778470388");
   background-size: cover !important;
   background-position: unset;
   min-height: 100vh;
@@ -19,5 +19,10 @@
 
 .outlinedButtonD:hover {
   background-color: #f34d26 !important;
+  color: #fdfcfd !important;
+}
+
+.oulinedButtonA:hover {
+  background-color: #3fb844 !important;
   color: #fdfcfd !important;
 }

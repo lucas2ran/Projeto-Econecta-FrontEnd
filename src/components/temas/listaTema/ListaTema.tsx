@@ -7,7 +7,7 @@ import {
   Button,
   Typography,
 } from "@material-ui/core";
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import "./ListaTema.css";
 import Tema from "../../../models/Tema";
 import { busca } from "../../../services/Service";
@@ -15,6 +15,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/tokensReducer";
 import { addToken } from "../../../store/tokens/actions";
 import { toast } from "react-toastify";
+import CadastroTema from "../cadastroTema/CadastroTema";
 
 function ListaTema() {
   const [temas, setTemas] = useState<Tema[]>([]);
@@ -79,7 +80,7 @@ function ListaTema() {
   }, [temas.length]);
   return (
     <>
-      <body className="bgposttemas">
+      <Box className="bgposttemas">
         <Typography
           variant="h3"
           color="textSecondary"
@@ -88,7 +89,7 @@ function ListaTema() {
           className="titulotema"
           style={{ padding: "35px" }}
         >
-          Temas que você encontra por aqui...
+          <CadastroTema />
         </Typography>
 
         <Box display="flex" flexDirection="row">
@@ -112,7 +113,7 @@ function ListaTema() {
                       <Box mx={1}>
                         <Button
                           variant="contained"
-                          className="marginLeft outlinedButtonD"
+                          className="marginLeft oulinedButtonA"
                           size="small"
                           style={{
                             borderColor: "white",
@@ -149,7 +150,7 @@ function ListaTema() {
             </Box>
           ))}
         </Box>
-      </body>
+      </Box>
     </>
   );
 }
