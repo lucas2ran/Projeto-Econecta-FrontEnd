@@ -33,7 +33,7 @@ function Footer() {
           className="font"
         >
           <Typography variant="h6" className="font">
-            Econecta-Grupo 2
+            Econecta
           </Typography>
           <Box display={"flex"} className="font">
             <Typography></Typography>

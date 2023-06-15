@@ -46,7 +46,8 @@
 }
 
 .bgSobre {
-  background-color: #3fb844;
+  background-image: url("https://ik.imagekit.io/0emfpelsr/wallpaperflare.com_wallpaper__4_.jpg?updatedAt=1684778470388");
+  background-size: cover;
 }
 
 .textoSobre {

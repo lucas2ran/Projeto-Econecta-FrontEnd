@@ -78,6 +78,9 @@ function Home() {
       </div>
     ));
   };
+  const renderPlayPauseButton = ({ isPlaying }) => {
+    return isPlaying ? "PAUSE" : "PLAY";
+  };
 
   return (
     <>
@@ -123,10 +126,11 @@ function Home() {
             items={items}
             disableDotsControls
             disableButtonsControls
-            autoPlay
+            autoPlayControls
             autoPlayInterval={3000}
             infinite
             responsive={responsive}
+            renderPlayPauseButton={renderPlayPauseButton}
           />
         </Grid>
 
@@ -291,6 +295,48 @@ function Home() {
           style={{ backgroundColor: "#1d5040", width: "20%" }}
         >
           <img
+            src="https://github.com/lariaparecida.png"
+            style={{ borderRadius: "300px", height: "100px", width: "100px" }}
+          />
+
+          <Box className="textinhoLinkedinGithub" style={{ paddingLeft: "5%" }}>
+            <Typography
+              variant="h5"
+              gutterBottom
+              color="textPrimary"
+              component="h3"
+              align="center"
+              style={{ color: "white" }}
+            >
+              Larissa Aparecida
+            </Typography>
+            <Box display="flex">
+              <a
+                href="https://www.linkedin.com/in/larissaparecida/"
+                target="blank"
+              >
+                <LinkedInIcon
+                  fontSize="large"
+                  style={{ color: "white", fontSize: "50px" }}
+                />
+              </a>
+
+              <a href="https://github.com/lariaparecida" target="blank">
+                <GitHubIcon
+                  fontSize="large"
+                  style={{ color: "white", fontSize: "50px" }}
+                />
+              </a>
+            </Box>
+          </Box>
+        </Box>
+
+        <Box
+          display="flex"
+          padding="2%"
+          style={{ backgroundColor: "#1d5040", width: "20%" }}
+        >
+          <img
             src="https://github.com/lucas2ran.png"
             style={{ borderRadius: "300px", height: "100px", width: "100px" }}
           />
@@ -361,48 +407,6 @@ function Home() {
               </a>
 
               <a href="https://github.com/RenanG7" target="blank">
-                <GitHubIcon
-                  fontSize="large"
-                  style={{ color: "white", fontSize: "50px" }}
-                />
-              </a>
-            </Box>
-          </Box>
-        </Box>
-
-        <Box
-          display="flex"
-          padding="2%"
-          style={{ backgroundColor: "#1d5040", width: "20%" }}
-        >
-          <img
-            src="https://github.com/lariaparecida.png"
-            style={{ borderRadius: "300px", height: "100px", width: "100px" }}
-          />
-
-          <Box className="textinhoLinkedinGithub" style={{ paddingLeft: "5%" }}>
-            <Typography
-              variant="h5"
-              gutterBottom
-              color="textPrimary"
-              component="h3"
-              align="center"
-              style={{ color: "white" }}
-            >
-              Larissa Aparecida
-            </Typography>
-            <Box display="flex">
-              <a
-                href="https://www.linkedin.com/in/larissaparecida/"
-                target="blank"
-              >
-                <LinkedInIcon
-                  fontSize="large"
-                  style={{ color: "white", fontSize: "50px" }}
-                />
-              </a>
-
-              <a href="https://github.com/lariaparecida" target="blank">
                 <GitHubIcon
                   fontSize="large"
                   style={{ color: "white", fontSize: "50px" }}
