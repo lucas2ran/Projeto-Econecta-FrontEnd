@@ -190,12 +190,11 @@ function Sobre() {
           </Typography>
 
           <Typography>
-            Econecta é uma rede social sustentável que une pessoas com o mesmo
-            ideal. Com criatividade e simplicidade, a Econecta é uma plataforma
-            que ajuda a promover um estilo de vida mais sustentável e
-            colaborativo, enquanto ajuda a salvar o planeta. Junte-se a nós e
-            comece a transformar o mundo em um lugar melhor, um passo de cada
-            vez.
+            Meu nome é Júlia e estudo Engenharia de Software na UNINTER. Cursei
+            um ano e meio psicologia antes de me apaixonar por tecnologia.
+            Recentemente realizei alguns cursos de front end e finalizei o curso
+            de full stack da Generation. Atualmente trabalho em Global Operation
+            Center na Sintel S.A
           </Typography>
 
           <Box display="flex">
