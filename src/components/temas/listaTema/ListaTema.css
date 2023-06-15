@@ -21,3 +21,8 @@
   background-color: #f34d26 !important;
   color: #fdfcfd !important;
 }
+
+.oulinedButtonA:hover {
+  background-color: #3fb844 !important;
+  color: #fdfcfd !important;
+}

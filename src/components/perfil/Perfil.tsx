@@ -246,7 +246,7 @@ function Perfil() {
                     <Button
                       fullWidth
                       variant="contained"
-                      className="outlinedButtonPerfil"
+                      className="oulinedButtonA"
                       style={{
                         borderColor: "white",
                         backgroundColor: "#09221a",

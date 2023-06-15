@@ -40,3 +40,22 @@
 .MuiOutlinedInput-notchedOutline {
   border-color: #09221a !important;
 }
+
+#selectTemas {
+  padding: 0.5rem 1rem;
+  width: 40%;
+  margin: 1rem auto;
+  border-radius: 8px;
+  border: 2px solid darkgreen;
+  background-color: transparent;
+}
+
+.oulinedButtonA {
+  border-color: #09221a !important;
+  color: #fcfcfc !important;
+}
+
+.oulinedButtonA:hover {
+  background-color: #3fb844 !important;
+  color: #fdfcfd !important;
+}
