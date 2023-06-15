@@ -75,7 +75,7 @@ function ListaPostagem() {
       <Box display="flex" flexDirection="column" className="bgpost">
         <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
           <InputLabel>Selecionar Tema</InputLabel>
-          <Select onChange={(event) => setTema(event.target.value)}>
+          <Select onChange={(event: any) => setTema(event.target.value)}>
             <MenuItem value="">Todos os temas</MenuItem>
             {temas.map((tema) => (
               <MenuItem value={tema.id}>{tema.descricao}</MenuItem>
